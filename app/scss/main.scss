@@ -1,0 +1,43 @@
+/******************* NAVIGATION *****************/
+
+
+
+.navbar-brand img {
+  position: relative;
+  top: -10px;
+  width: 130px;
+  height: 45px;
+}
+
+.navbar-default,
+.navbar-nav li a{
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color: #424242 !important;
+}
+
+.navbar-nav li:hover {
+  border-bottom-style: solid;
+  border-width: 3px;
+  font-weight: bold;
+}
+
+.navbar-nav li:hover {
+  border-bottom-style: solid;
+  border-width: 3px;
+}
+
+
+/*************** Homepage *******************/
+
+.codeSearch {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.87);  
+}
+
+.participantFindButton {
+  position: relative;
+  top: 25px;
+}
