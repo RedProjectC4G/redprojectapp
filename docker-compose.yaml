@@ -10,3 +10,15 @@ services:
       - ./src:/srv/www/redproject
     working_dir: /srv/www/redproject
     command: python manage.py run
+  db:
+    image: postgres:9.6-alpine
+    ports:
+      - "9001:5432"
+    volumes:
+      - database:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: "admin"
+      POSTGRES_USER: "admin"
+      POSTGRES_DB: "red_development"
+volumes:
+  database:
