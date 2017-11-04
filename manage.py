@@ -8,11 +8,18 @@ from app.settings import get_config
 from app.app import create_app
 from app.extensions import db
 
+"""3.4 is crippled"""
+try:
+    from os import scandir, walk
+except ImportError:
+    from scandir import scandir, walk
+
+
 def find_assets():
     """Yield paths for all static files and templates."""
     for name in ['static', 'templates']:
         directory = os.path.join(app.config['PATH'], name)
-        for entry in os.scandir(directory):
+        for entry in scandir(directory):
             if entry.is_file():
                 yield entry.path
 
