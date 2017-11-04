@@ -1,3 +1,5 @@
+/******* STYLING VARIABLES ********/
+/****** Pixel size responsive to screen ******/
 /******************* NAVIGATION *****************/
 .navbar-brand img {
   position: relative;
@@ -30,3 +32,56 @@
 .participantFindButton {
   position: relative;
   top: 25px; }
+
+/*****Table styling *******/
+table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 17px;
+  margin-right: 17px;
+  table-layout: fixed;
+  width: 100%; }
+  table thead {
+    font-family: Roboto;
+    color: #9b9b9b;
+    font-size: 1.4rem; }
+  table tbody tr {
+    color: black;
+    background-color: #9b9b9b; }
+    table tbody tr td {
+      height: 5rem;
+      font-size: 1.4rem; }
+  table tbody tr:nth-child(even) {
+    background-color: #ffffff; }
+  table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+    box-shadow: 0 -1px 0 0 #eceeef; }
+  table tbody td:nth-child(7) {
+    background-color: #efefef; }
+  table tbody td:nth-child(10) {
+    background-color: #efefef; }
+  table th {
+    height: 5rem;
+    text-align: center; }
+  table tr :nth-of-type(1) {
+    width: 9.99%; }
+  table tr :nth-of-type(2)
+:nth-of-type(3)
+:nth-of-type(4)
+:nth-of-type(5)
+:nth-of-type(6)
+:nth-of-type(7)
+:nth-of-type(8)
+:nth-of-type(9)
+:nth-of-type(10)
+:nth-of-type(11) {
+    width: 6.66%; }
+  table tr :nth-of-type(12) {
+    width: 16.65%; }
+  table tr :nth-of-type(13) {
+    width: 6.66%; }
+
+/*TODO: if have time later fix with in tables so do not have to use important*/
+img {
+  height: 20px !important;
+  width: 20px !important; }

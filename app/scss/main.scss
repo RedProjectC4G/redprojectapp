@@ -1,6 +1,20 @@
+/******* STYLING VARIABLES ********/
+$white: #ffffff;
+$background_gray: #f9f9f9;
+$navy_blue: #424242;
+$light_gray: #9b9b9b;
+$light_medium_gray: #efefef;
+$medium_gray: #757575;
+$black: #373a3c;
+
+/****** Pixel size responsive to screen ******/
+$html-font-size: 10px;
+$base-font-size: 1rem;
+@function rem-calc($n) {
+  @return $base-font-size * $n / $html-font-size;
+}
+
 /******************* NAVIGATION *****************/
-
-
 
 .navbar-brand img {
   position: relative;
@@ -10,7 +24,7 @@
 }
 
 .navbar-default,
-.navbar-nav li a{
+.navbar-nav li a {
   font-family: Roboto, sans-serif;
   font-size: 16px;
   color: #424242 !important;
@@ -27,17 +41,90 @@
   border-width: 3px;
 }
 
-
 /*************** Homepage *******************/
 
 .codeSearch {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
-  color: rgba(0, 0, 0, 0.87);  
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .participantFindButton {
   position: relative;
   top: 25px;
+}
+
+/*****Table styling *******/
+table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 17px;
+  margin-right: 17px;
+  table-layout: fixed;
+  width: 100%;
+  thead {
+    font-family: Roboto;
+    color: $light_gray;
+    font-size: rem-calc(14px);
+  }
+  tbody tr {
+    color: black;
+    background-color: $light_gray;
+    td {
+      height: rem-calc(50px);
+      font-size: rem-calc(14px);
+    }
+  }
+  tbody tr:nth-child(even) {
+    background-color: $white;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $background_gray;
+    box-shadow: 0 -1px 0 0 #eceeef;
+  }
+
+  //highlight the total columns
+  tbody td:nth-child(7) {
+    background-color: $light_medium_gray;
+  }
+
+  tbody td:nth-child(10) {
+    background-color: $light_medium_gray;
+  }
+
+  th {
+    height: rem-calc(50px);
+    text-align: center;
+  }
+
+  tr {
+    :nth-of-type(1) {
+      width: 9.99%;
+    }
+    :nth-of-type(2)
+      :nth-of-type(3)
+      :nth-of-type(4)
+      :nth-of-type(5)
+      :nth-of-type(6)
+      :nth-of-type(7)
+      :nth-of-type(8)
+      :nth-of-type(9)
+      :nth-of-type(10)
+      :nth-of-type(11) {
+      width: 6.66%;
+    }
+    :nth-of-type(12) {
+      width: 16.65%;
+    }
+    :nth-of-type(13) {
+      width: 6.66%;
+    }
+  }
+}
+
+/*TODO: if have time later fix with in tables so do not have to use important*/
+img {
+  height: 20px !important;
+  width: 20px !important;
 }
