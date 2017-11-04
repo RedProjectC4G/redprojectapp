@@ -1,6 +1,6 @@
 from flask import Blueprint, url_for
 from flask_api import status
-
+from ..models import ClientUser
 
 blueprint = Blueprint('api_root', __name__)
 
