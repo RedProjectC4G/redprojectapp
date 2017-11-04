@@ -16,7 +16,7 @@ def create_app(config):
     configure_logging(app)
 
     register_blueprints(app)
-    #register_extensions(app)
+    register_extensions(app)
 
     return app
 
@@ -41,9 +41,6 @@ def register_backend(app):
 def register_frontend(app):
     app.register_blueprint(views.index.blueprint)
 
-"""
+
 def register_extensions(app):
     extensions.db.init_app(app)
-    extensions.bootstrap.init_app(app)
-    extensions.nav.init_app(app)
-"""
