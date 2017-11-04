@@ -1,7 +1,6 @@
-from flask_sqlalchemy import SQLAlchemy
-import datetime
 
-db = SQLAlchemy()
+from ..extensions import db
+import datetime
 
 class BaseModel(db.Model):
     """Base data model for all objects"""
@@ -17,7 +16,7 @@ class BaseModel(db.Model):
             for column, value in self._to_dict().items()
         })
 
-class ClientUserModel(BaseModel):
+class ClientUser(BaseModel, db.Model):
     """ Holds the 8 digit code for users that are using the client """
     __tablename__ = 'client_users'
 
