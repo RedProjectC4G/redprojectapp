@@ -47,3 +47,52 @@ hr {
 
 .infoFindButton {
   margin-bottom: 50px; }
+
+/***************Visits Information Page********/
+.individual-name h1 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33; }
+  .individual-name h1 .individual-id-num {
+    padding-left: 15px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #999999; }
+  .individual-name h1 .edit-individual {
+    padding-left: 15px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: #2196f3;
+    text-decoration: underline; }
+
+.individual-info-header > th {
+  color: #9b9b9b;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500; }
+
+.individual-info > td {
+  padding-bottom: 20px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400; }
+
+.individual-table-row {
+  background-color: #fafafa;
+  border-top: solid 1px #efefef;
+  border-bottom: solid 1px #efefef; }
+
+table {
+  border-style: none; }
+  table tbody {
+    margin-bottom: 30px; }
+  table tr {
+    height: 30px; }
+    table tr th,
+    table tr td {
+      width: 15%; }
