@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  web:
+    build: .
+    environment:
+      - FLASK_ENV=dev
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./src:/srv/www/redproject
+    working_dir: /srv/www/redproject
+    command: python manage.py run
