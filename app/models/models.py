@@ -17,11 +17,18 @@ class BaseModel(db.Model):
         })
 
 class ClientUserModel(BaseModel):
-    """ Holds the 8 digit code for users that are using the client and the data from the intake form """
+    """ Holds the 8 digit code for users that are using the client """
     __tablename__ = 'client_users'
 
     id = db.Column(db.Integer, primary_key = True)
     code = db.Column(db.String)
+
+class ParticipantInfoModel(BaseModel):
+    """ Holds the data from the client intake form """
+    __tablename__ = 'participant_info'
+
+    id = db.Column(db.Integer, primary_key = True)
+    client_id = db.Column(db.Integer, db.ForeignKey("client_users.id"), nullable=False)
     intake_data = db.Column(db.JSON)
 
 class LocationModel(BaseModel):
@@ -29,37 +36,23 @@ class LocationModel(BaseModel):
     __tablename__ = 'locations'
 
     id = db.Column(db.Integer, primary_key = True)
-    code = db.Column(db.String)
-    intake_data = db.Column(db.JSON)
+    name = db.Column(db.String)
 
-class OverdoseExperienceModel(BaseModel):
-    """ Holds the information about the overdose experience a participant has witnessed on a given data """
-    __tablename__ = 'overdose_experiences'
-
-    id = db.Column(db.Integer, primary_key = True)
-    client_id = db.Column(db.Integer, db.ForeignKey("client_users.id"), nullable=False)
-    num_personal = db.Column(db.Integer)
-    num_witnessed = db.Column(db.Integer)
-    num_witnessed_hospital = db.Column(db.Integer)
-    num_witnessed_dead = db.Column(db.Integer)
-
-class DrugIntakeModel(BaseModel):
-    """ Holds information about which drugs the participant has used recently to determine risk """
-    __tablename__ = 'drug_intakes'
+class DrugsModel(BaseModel):
+    """ Holds information about which drugs are available to select """
+    __tablename__ = 'drugs'
 
     id = db.Column(db.Integer, primary_key = True)
-    client_id = db.Column(db.Integer, db.ForeignKey("client_users.id"), nullable=False)
-    date = db.Column(db.Date)
-    heroin = db.Column(db.Boolean)
-    methadone = db.Column(db.Boolean)
-    cocain = db.Column(db.Boolean)
-    alcohol = db.Column(db.Boolean)
-    benzodiazapemes = db.Column(db.Boolean)
-    clonodine = db.Column(db.Boolean)
-    speed = db.Column(db.Boolean)
-    pcp = db.Column(db.Boolean)
-    other = db.Column(db.Boolean)
-    unknown = db.Column(db.Boolean)
+    name = db.Column(db.String)
+    category = db.Column(db.String)
+
+class ReversalDrugsModel(BaseModel):
+    """ Join table linking a record in the overdose_reversals table to records in the drugs table """
+    __tablename__ = 'overdose_reversal_drugs'
+
+    id = db.Column(db.Integer, primary_key = True)
+    reversal_id = db.Column(db.Integer, db.ForeignKey("overdose_reversals.id"), nullable=False)
+    drug_id = db.Column(db.Integer, db.ForeignKey("drugs.id"), nullable=False)
 
 class OverdoseReversalsModel(BaseModel):
     """ Holds information about overdose reversals, supplies used, and steps performed """
@@ -67,18 +60,42 @@ class OverdoseReversalsModel(BaseModel):
 
     id = db.Column(db.Integer, primary_key = True)
     client_id = db.Column(db.Integer, db.ForeignKey("client_users.id"), nullable=False)
-    drug_intake_id = db.Column(db.Integer, db.ForeignKey("drug_intake.id"), nullable=False)
     date = db.Column(db.Date)
     county = db.Column(db.String)
     site = db.Column(db.String)
     date_of_overdose = db.Column(db.Date)
     time_before_naloxone = db.Column(db.Integer)
     naloxone_amount = db.Column(db.Integer)
-    intra_nasal_doses = db.Column(db.Integer)
+    num_intra_nasal_doses = db.Column(db.Integer)
     route = db.Column(db.String)
     performed_rescue_breathing = db.Column(db.Boolean)
     used_barrier = db.Column(db.Boolean)
-    od_returned_time = db.Column(db.Integer)
+    overdose_returned_time = db.Column(db.Integer)
     police_called = db.Column(db.Boolean)
-    employee_initials = db.Colun(db.String)
+    employee_initials = db.Column(db.String)
 
+class SyringeModel(BaseModel):
+    """ Holds information about the different syringe models """
+    __tablename__ = 'syringes'
+
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String)
+
+class SyringeAccessModel(BaseModel):
+    """ Holds information from the syringe access form """
+    __tablename__ = 'syringe_access'
+
+    id = db.Column(db.Integer, primary_key = True)
+    new_client = db.Column(db.Boolean)
+    safe_crack_supplies = db.Column(db.Boolean)
+    num_overdose_kits = db.Column(db.Integer)
+    seconday_syringe_exchange = db.Column(db.Integer)
+
+class SyringeAccessSyringesModel(BaseModel):
+    """ Join table between the syringe_access table and the syringes table """
+    __tablename__ = 'syringe_access_syringes'
+
+    id = db.Column(db.Integer, primary_key = True)
+    syringe_access_id = db.Column(db.Integer, db.ForeignKey("syringe_access.id"), nullable=False)
+    syringe_id = db.Column(db.Integer, db.ForeignKey("syringes.id"), nullable=False)
+    count = db.Column(db.Integer)
