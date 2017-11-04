@@ -32,7 +32,7 @@ class DevConfig(Config):
 
     POSTGRES_USER = 'admin'
     POSTGRES_PW = 'admin'
-    POSTGRES_HOST = '127.0.0.1'
+    POSTGRES_HOST = 'db'
     POSTGRES_PORT = '5432'
     POSTGRES_DB_NAME = 'red_development'
     SQLALCHEMY_DATABASE_URI = 'postgresql://{0}:{1}@{2}:{3}/{4}'.format(POSTGRES_USER, POSTGRES_PW, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB_NAME)
