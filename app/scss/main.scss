@@ -1,3 +1,12 @@
+/**************VARIABLES*************/
+
+$white: #ffffff;
+$background_gray: #f9f9f9;
+$navy_blue: #424242;
+$light_gray: #9b9b9b;
+$medium_gray: #757575;
+$background-color: $white;
+
 /******************* NAVIGATION *****************/
 
 
@@ -22,17 +31,13 @@
   font-weight: bold;
 }
 
-.navbar-nav li:hover {
-  border-bottom-style: solid;
-  border-width: 3px;
-}
 
 
 /*************** Homepage *******************/
 
 .codeSearch {
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.87);  
 }
@@ -40,4 +45,28 @@
 .participantFindButton {
   position: relative;
   top: 25px;
+    @media (max-width: 972px) {
+      top: 0px;
+    }
 }
+
+.headline {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #373a3c;
+  margin-bottom: -8px;
+}
+.gender-row {
+  margin-top: 15px;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+.infoFindButton {
+  margin-bottom: 50px;
+}
+

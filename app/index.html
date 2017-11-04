@@ -34,12 +34,12 @@
           </div>
           <div id="navbar1" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="#">Participant Search</a></li>
-              <li><a href="#">Dispense Order</a></li>
-              <li><a href="#">Reversal Report</a></li>
+              <li><a href="index.html">Participant Search</a></li>
+              <li><a href="dispenseorder.html">Dispense Order</a></li>
+              <li><a href="reversalreport.html">Reversal Report</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="">Login</a></li>
+              <li><a href="login.html">Login</a></li>
             </ul>
           </div>
           <!--/.nav-collapse -->
@@ -57,13 +57,13 @@
         <form action="" method="post">
           <div class="col-md-4">
             <div class="form-group has-feedback">
-              <label class="control-label">Participant Code</label>
+              <label class="control-label headline">Participant Code</label>
               <input type="text" class="form-control" id="participantCodeInput" placeholder="XX0000X" />
               <i class="glyphicon glyphicon-search form-control-feedback"></i>
             </div>
           </div>
           <div class="col-md-2">
-            <button type="submit" class="btn btn-block btn-danger participantFindButton">Find</button>
+            <button type="submit" class="btn btn-block btn-primary participantFindButton">Find</button>
           </div>
         </form>  
       </div>
@@ -82,10 +82,12 @@
       </div>
       <form action="" method="post">
         <div class="row">
-          <div class="col-md-12">Gender</div>
+          <div class="col-md-12">
+            <h2 class="headline">Gender</h2>
+          </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 gender-row">
             <div class="input-group">
               <label class="radio-inline"><input type="radio" value="Male" name="male">Male</label>
               <label class="radio-inline"><input type="radio" value="female" name="female">Female</label>
@@ -94,36 +96,139 @@
           </div><!-- /.col-lg-6 -->
         </div>
         <div class="row">
+          <div class="col-md-12">
+            <h2 class="headline">First Name</h2>
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-4">
             <div class="form-group has-feedback">
-              <label class="control-label">First Name</label>
+              <label class="control-label headline"></label>
               <input type="text" class="form-control" id="firstName" />
             </div>
           </div>
         </div>   
+
+        <div class='row'>
+          <div class="col-md-12">
+            <h2 class="headline">Birthday</h2>   
+          </div>
+        </div>
+
         <div class="row">
-          <div class="col-md-12">Birthday</div>
           <div class="form-group">
-            <label for="sel1">Select list:</label>
-            <select class="form-control" id="sel1">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-            </select>
+            <div class="col-md-2">
+              <label for="month"></label>
+                  <select name="month" class="form-control" id="month">
+                    <option value="" selected disabled hidden>Month</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                  </select>
+            </div>
+            
+            <div class="col-md-2">
+              <label for="date"></label>
+                  <select name="date" class="form-control" id="date">
+                    <option value="" selected disabled hidden>Date</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                  </select>
+            </div>
+
+            <div class="col-md-2">
+              <label for="year"></label>
+                <select name="yearpicker" class="form-control" id="yearpicker">
+                <option value="" selected disabled hidden>Year</option>
+                </select>
+            </div>
+
           </div>
         </div>   
+
+        <div class="row initial-row">
+          <div class="col-md-12">
+            <h2 class="headline">Mother's First Initials</h2>
+          </div>
+        </div>
+
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-2">
             <div class="form-group has-feedback">
-              <label class="control-label">Mother's First Name</label>
-              <input type="text" class="form-control" id="motherName" />
+              <label class="control-label headline"></label>
+                  <select name="motherInitial" class="form-control" id="motherInitial">
+                    <option value="" selected disabled hidden>Initial</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>G</option>
+                    <option>H</option>
+                    <option>I</option>
+                    <option>J</option>
+                    <option>K</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>N</option>
+                    <option>O</option>
+                    <option>P</option>
+                    <option>Q</option>
+                    <option>R</option>
+                    <option>S</option>
+                    <option>T</option>
+                    <option>U</option>
+                    <option>V</option>
+                    <option>W</option>
+                    <option>X</option>
+                    <option>Y</option>
+                    <option>Z</option>
+                  </select>
             </div>
           </div>
         </div>   
-        <div class="row">
+        <div class="row infoFindButton">
             <div class="col-md-2">
-              <button type="submit" class="btn btn-block btn-danger participantFindButton">Find</button>
+              <button type="submit" class="btn btn-block btn-primary infoSearchButton">Find</button>
           </div>
         </div>         
     </div>  
@@ -133,4 +238,5 @@
     <script src="js/jquery/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
