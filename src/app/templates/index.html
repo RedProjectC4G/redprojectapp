@@ -54,16 +54,16 @@
         </div>
       </div>
       <div class="row">
-        <form action="" method="post">
+        <form action="{{ url_for('api_participant.find_participant') }}" method="post">
           <div class="col-md-4">
             <div class="form-group has-feedback">
               <label class="control-label">Participant Code</label>
-              <input type="text" class="form-control" id="participantCodeInput" placeholder="XX0000X" />
+              <input type="text" class="form-control" id="participant_code" name="participant_code" placeholder="XX0000X" />
               <i class="glyphicon glyphicon-search form-control-feedback"></i>
             </div>
           </div>
           <div class="col-md-2">
-            <button type="submit" class="btn btn-block btn-danger participantFindButton">Find</button>
+            <input type="submit" class="btn btn-block btn-danger participantFindButton">Find </input>
           </div>
         </form>
       </div>
@@ -80,7 +80,7 @@
           <h1 class="codeSearch">Search by Info</h1>
         </div>
       </div>
-      <form action="" method="post">
+      <form action="{{ url_for('api_participant.find_participant_by_parts') }}" method="post">
         <div class="row">
           <div class="col-md-12">Gender</div>
         </div>
@@ -123,7 +123,7 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-              <button type="submit" class="btn btn-block btn-danger participantFindButton">Find</button>
+              <input type="submit" class="btn btn-block btn-danger participantFindButton">Find</input>
           </div>
         </div>
     </div>

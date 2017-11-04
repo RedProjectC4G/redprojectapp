@@ -10,6 +10,7 @@ class Config:
     ROOT = os.path.dirname(PATH)
     DEBUG = False
     THREADED = False
+    SECRET_KEY = "r0834ht0vgb047gt"
 
 class ProdConfig(Config):
     """Production configuration."""
@@ -22,6 +23,7 @@ class ProdConfig(Config):
     POSTGRES_PORT = os.getenv('POSTGRES_PORT')
     POSTGRES_DB_NAME = os.getenv('POSTGRES_DB_NAME')
     SQLALCHEMY_DATABASE_URI = 'postgresql://{0}:{1}@{2}:{3}/{4}'.format(POSTGRES_USER, POSTGRES_PW, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB_NAME)
+    SECRET_KEY = "r0834ht0vgb047gt"
 
 class DevConfig(Config):
     """Development configuration."""
@@ -36,6 +38,7 @@ class DevConfig(Config):
     POSTGRES_PORT = '5432'
     POSTGRES_DB_NAME = 'red_development'
     SQLALCHEMY_DATABASE_URI = 'postgresql://{0}:{1}@{2}:{3}/{4}'.format(POSTGRES_USER, POSTGRES_PW, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB_NAME)
+    SECRET_KEY = "r0834ht0vgb047gt"
 
 def get_config(name):
     assert name, "no configuration specified"
