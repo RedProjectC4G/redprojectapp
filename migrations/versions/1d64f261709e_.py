@@ -87,7 +87,8 @@ def upgrade():
             {'id':2, 'name':'1cc 28g 1/2"'},
             {'id':3, 'name':'1cc 30g 5/16"'},
             {'id':4, 'name':'3cc 25g 1/2"'},
-            {'id':5, 'name':'1/2cc 28g 1/2"'}
+            {'id':5, 'name':'1/2cc 28g 1/2"'},
+            {'id':6, 'name':'Other syringes'}
         ]
     )
 
