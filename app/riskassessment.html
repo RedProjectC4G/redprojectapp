@@ -49,7 +49,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-4">
-            <h1 class="new-participant">New Participant</h1>
+            <h1 class="risk-heading">Risk Assessment</h1>
           </div>
         </div>
 
@@ -61,23 +61,23 @@
 
         <div class="row">
           <div class="col-md-12">
-            <h1 class="demographic-header">Demographics</h1>
+            <h1 class="drug-heading">Drug Use Behavior</h1>
           </div>
         </div>
 
         <form action="" method="post">
           <div class="row">
             <div class="col-md-12">
-              <h2 class="headline">First Initial</h2>
+              <h2 class="headline">What is the preferred drug?</h2>
             </div>
           </div>
 
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-3">
             <div class="form-group">
               <label class="control-label headline"></label>
-                <select name="firstNameInitial" class="form-control" id="firstNameInitial">
-                <option value="" selected disabled hidden>Initial</option>
+                <select name="drugofchoice" class="form-control" id="drugofchoice">
+                <option value="" selected disabled hidden>Drug of Choice</option>
                 <option>A</option>
                         <option>B</option>
                         <option>C</option>
@@ -108,6 +108,92 @@
               </div>
             </div>  
           </div>
+
+          <div class="row ">
+            <div class="form-group">
+              <div class="col-md-4">
+                <span class="headline">Other drugs used on a regular basis</span>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Crack</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Alcohol</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Cocaine</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Speed</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Native American/First Nations/First People/Alaskan Native</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Middle Eastern/North African</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">White/Caucasian</label>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="">Bi-racial/Multi-ethnic</label>
+                </div>
+                 <div class="checkbox">
+                  <label><input type="checkbox" value="">Prefer not to answer</label>
+                </div>
+              </div>
+            </div>
+          </div>   
+
+          <div class="row">
+          <div class="col-md-4">
+          <span class="headline">Other opiates used</span>
+            <div class="form-group">
+              <label class="control-label headline"></label>
+                <select name="otheropiates" class="form-control" id="otheropiates">
+                  <option value="" selected disabled hidden>Opiates</option>
+                  <option>None</option>
+                  <option>Oxycontin</option>
+                  <option>Methodone</option>
+                  <option>Fentanyl</option>
+                  <option>Percoset</option>
+                </select>
+              </div>
+            </div>  
+          </div>
+
+        <div class="row">
+          <div class="col-md-4">
+          <span class="headline">Frequency of injection</span>
+            <div class="form-group">
+              <label class="control-label headline"></label>
+                <select name="injectionfrequency" class="form-control" id="injectionfrequency">
+                  <option value="" selected disabled hidden>Injection Frequency</option>
+                  <option></option>
+                  <option>Never</option>
+                  <option>Less than once a week</option>
+                  <option>A few times a week</option>
+                  <option>Once a day</option>
+                  <option>Several times a day</option>
+                </select>
+              </div>
+            </div>  
+          </div>
+
+          <div class="row">
+            <div class="col-md-offset-1 col-md-4">
+              <span class="headline">How long have you been injecting?</span>
+              <div class="form-group">
+                <label class="control-label headline"></label>
+                <select name="howlonginjectiing" class="form-control" id="howlonginjecting">
+                  <option>Less than a year</option>
+                  <option>1-3 years</option>
+                  <option>3-10 years</option>
+                  <option>More than 10 years</option>
+                </select>
+              </div>
+            </div>  
+          </div>
+
 
 
         <div class="row">
@@ -355,8 +441,4 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 
-<<<<<<< HEAD
   </body>
-=======
-  </body>
->>>>>>> 52fcbf62a9b5795834ad0c4427dabbbdd67f44e5
