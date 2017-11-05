@@ -37,7 +37,7 @@ def register_blueprints(app):
 def register_backend(app):
     app.register_blueprint(views.api_root.blueprint)
     app.register_blueprint(views.api_participant.blueprint)
-
+    
 
 def register_frontend(app):
     app.register_blueprint(views.index.blueprint)
