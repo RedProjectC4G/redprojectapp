@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+
+  <title>Red Project Management</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand" href=""><img src="images/logo.png" alt="Red Project Logo">
+            </a>
+      </div>
+      <div id="navbar1" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Participant Search</a></li>
+          <li><a href="dispenseorder.html">Dispense Order</a></li>
+          <li><a href="reversalreport.html">Reversal Report</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Login</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="codeSearch">Search by Code</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <form action="" method="post">
+        <div class="col-md-4">
+          <div class="form-group has-feedback">
+            <label class="control-label">Participant Code</label>
+            <input type="text" class="form-control" id="participantCodeInput" placeholder="XX0000X" />
+            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-block btn-primary participantFindButton">Find</button>
+        </div>
+      </form>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="codeSearch">Search by Info or Create New</h1>
+      </div>
+    </div>
+
+
+  <form action="" method="post">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="headline">Gender</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 gender-row">
+        <div class="input-group">
+          <label class="radio-inline"><input type="radio" value="Male" name="gender">Male</label>
+          <label class="radio-inline"><input type="radio" value="female" name="gender">Female</label>
+          <label class="radio-inline"><input type="radio" value="non-binary" name="gender">Non-binary</label>
+        </div>
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="headline">First Initial</h2>
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-2">
+            <div class="form-group">
+              <label class="control-label headline"></label>
+                <select name="firstNameInitial" class="form-control" id="firstNameInitial">
+                <option value="" selected disabled hidden>Initial</option>
+                <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                        <option>D</option>
+                        <option>E</option>
+                        <option>F</option>
+                        <option>G</option>
+                        <option>H</option>
+                        <option>I</option>
+                        <option>J</option>
+                        <option>K</option>
+                        <option>L</option>
+                        <option>M</option>
+                        <option>N</option>
+                        <option>O</option>
+                        <option>P</option>
+                        <option>Q</option>
+                        <option>R</option>
+                        <option>S</option>
+                        <option>T</option>
+                        <option>U</option>
+                        <option>V</option>
+                        <option>W</option>
+                        <option>X</option>
+                        <option>Y</option>
+                        <option>Z</option>
+                </select>
+              </div>
+            </div>  
+          </div>
+      
+      <!-- /.col-lg-6 -->
+    
+
+    <div class='row'>
+      <div class="col-md-12">
+        <h2 class="headline">Date of Birth</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <div class="col-md-3">
+          <label for="month"></label>
+          <input type="date" class="form-control" id="name">
+         </div>
+      </div>
+    </div>
+
+    <div class="row initial-row">
+      <div class="col-md-12">
+        <h2 class="headline">Mother's First Initials</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class="form-group has-feedback">
+          <label class="control-label headline"></label>
+          <select name="motherInitial" class="form-control" id="motherInitial">
+                    <option value="" selected disabled hidden>Initial</option>
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>
+                    <option>G</option>
+                    <option>H</option>
+                    <option>I</option>
+                    <option>J</option>
+                    <option>K</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>N</option>
+                    <option>O</option>
+                    <option>P</option>
+                    <option>Q</option>
+                    <option>R</option>
+                    <option>S</option>
+                    <option>T</option>
+                    <option>U</option>
+                    <option>V</option>
+                    <option>W</option>
+                    <option>X</option>
+                    <option>Y</option>
+                    <option>Z</option>
+                  </select>
+        </div>
+      </div>
+    </div>
+    <div class="row infoFindButton">
+      <div class="col-md-2">
+        <button type="submit" class="btn btn-block btn-primary infoSearchButton">Find</button>
+      </div>
+    </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>

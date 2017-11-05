@@ -1,0 +1,466 @@
+/******* STYLING VARIABLES ********/
+
+$white: #ffffff;
+$background_gray: #f9f9f9;
+$navy_blue: #424242;
+$light_gray: #9b9b9b;
+$light_medium_gray: #efefef;
+$medium_gray: #757575;
+$black: #373a3c;
+
+/****** Pixel size responsive to screen ******/
+
+$html-font-size: 10px;
+$base-font-size: 1rem;
+@function rem-calc($n) {
+  @return $base-font-size * $n / $html-font-size;
+}
+
+/******************* NAVIGATION *****************/
+
+
+.navbar-brand img {
+  position: relative;
+  top: -10px;
+  width: 130px;
+  height: 45px;
+}
+
+.navbar-default,
+.navbar-nav li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: #424242 !important;
+}
+
+.navbar-nav li:hover {
+  border-bottom-style: solid;
+  border-width: 3px;
+  font-weight: bold;
+}
+
+
+/***************Visits Information Page********/
+
+.individual-name {
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.33;
+    .individual-id-num {
+      padding-left: 15px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #999999; 
+    }
+    .edit-individual {
+      padding-left: 15px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+      color: #2196f3;
+      text-decoration: underline;
+    }
+  }
+}
+
+.individual-info-header > th {
+  color: $light_gray;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.individual-info > td {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.individual-table-row {
+  background-color: #fafafa;
+  border-top: solid 1px #efefef;
+  border-bottom: solid 1px #efefef;
+}
+
+table {
+  border-style: none;
+  tbody {
+    margin-bottom: 30px;
+  }
+  tr {
+    height: 30px;
+    th,
+    td {
+      width: 15%;
+    }
+  }
+}
+
+
+
+/*****Table styling *******/
+
+table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 17px;
+  margin-right: 17px;
+  table-layout: fixed;
+  width: 100%;
+  thead {
+    font-family: Roboto;
+    color: $light_gray;
+    font-size: rem-calc(14px);
+  }
+  tbody tr {
+    color: black;
+    background-color: $light_gray;
+    td {
+      height: rem-calc(50px);
+      font-size: rem-calc(14px);
+    }
+  }
+  tbody tr:nth-child(even) {
+    background-color: $white;
+  }
+  tbody tr:nth-child(odd) {
+    background-color: $background_gray;
+    box-shadow: 0 -1px 0 0 #eceeef;
+  } //highlight the total columns
+  tbody td:nth-child(7) {
+    background-color: $light_medium_gray;
+  }
+  tbody td:nth-child(10) {
+    background-color: $light_medium_gray;
+  }
+  th {
+    height: rem-calc(50px);
+    text-align: center;
+  }
+  tr {
+    :nth-of-type(1) {
+      width: 9.99%;
+    }
+    :nth-of-type(2)
+      :nth-of-type(3)
+      :nth-of-type(4)
+      :nth-of-type(5)
+      :nth-of-type(6)
+      :nth-of-type(7)
+      :nth-of-type(8)
+      :nth-of-type(9)
+      :nth-of-type(10)
+      :nth-of-type(11) {
+      width: 6.66%;
+    }
+    :nth-of-type(12) {
+      width: 16.65%;
+    }
+    :nth-of-type(13) {
+      width: 6.66%;
+    }
+  }
+}
+
+
+
+
+/*************** Homepage Search *******************/
+
+.codeSearch {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.participantFindButton {
+  position: relative;
+  top: 22px;
+}
+
+@media (max-width: 972px) {
+  .participantFindButton {
+    top: 0px;
+  }
+}
+
+.headline {
+  font-family: "Roboto";
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #373a3c;
+  margin-bottom: -8px;
+}
+
+.gender-row {
+  margin-top: 15px;
+}
+
+hr {
+  margin-bottom: 0;
+}
+
+.infoFindButton {
+  margin-bottom: 50px;
+}
+
+/*****Table styling *******/
+
+.client-display {
+  /*TODO: if have time later fix with in tables so do not have to use important*/
+}
+
+.client-display table {
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 17px;
+  margin-right: 17px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.client-display table thead {
+  font-family: Roboto;
+  color: #9b9b9b;
+  font-size: 1.4rem;
+}
+
+.client-display table tbody tr {
+  color: black;
+  background-color: #9b9b9b;
+}
+
+.client-display table tbody tr td {
+  height: 5rem;
+  font-size: 1.4rem;
+}
+
+.client-display table tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+
+.client-display table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+  box-shadow: 0 -1px 0 0 #eceeef;
+}
+
+.client-display table tbody td:nth-child(7) {
+  background-color: #efefef;
+}
+
+.client-display table tbody td:nth-child(10) {
+  background-color: #efefef;
+}
+
+.client-display table th {
+  height: 5rem;
+  text-align: center;
+}
+
+.client-display table tr :nth-of-type(1) {
+  width: 9.99%;
+}
+
+.client-display
+  table
+  tr
+  :nth-of-type(2)
+  :nth-of-type(3)
+  :nth-of-type(4)
+  :nth-of-type(5)
+  :nth-of-type(6)
+  :nth-of-type(7)
+  :nth-of-type(8)
+  :nth-of-type(9)
+  :nth-of-type(10)
+  :nth-of-type(11) {
+  width: 6.66%;
+}
+
+.client-display table tr :nth-of-type(12) {
+  width: 16.65%;
+}
+
+.client-display table tr :nth-of-type(13) {
+  width: 6.66%;
+}
+
+
+/********Participant Info Styling ************/
+
+.participant-info .individual-name h1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+}
+
+.participant-info .individual-name h1 .individual-id-num {
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #999;
+}
+
+.participant-info .individual-name h1 .edit-individual {
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.participant-info .individual-info-header > th {
+  color: #9b9b9b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.participant-info .individual-info > td {
+  padding-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.participant-info .individual-table-row {
+  background-color: #fafafa;
+  border-top: solid 1px #efefef;
+  border-bottom: solid 1px #efefef;
+}
+
+.participant-info table {
+  border-style: none;
+}
+
+.participant-info table tbody {
+  margin-bottom: 30px;
+}
+
+.participant-info table tr {
+  height: 30px;
+}
+
+.participant-info table tr th,
+.participant-info table tr td {
+  width: 15%;
+}
+
+/**************** New Client Form *************/
+
+.new-participant {
+  margin-bottom: -15px;
+  font-size: 24px;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.demographic-header {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.residence {
+  margin-bottom: 20px;
+}
+
+.submit-intake-row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*************** Risk Assessment Form ***********/
+
+
+.radio-spacing,
+.date-spacing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.year-spacing {
+  top: 10px;
+}
+
+.headline-space {
+  margin-top: 10px;
+}
+
+.risk-heading{
+  margin-bottom: -15px;;
+}
+
+.risk-heading {
+  margin-bottom: -15px;
+  font-size: 24px;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.drug-heading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.submit-assessment-row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/************** Reversal Report ***************/
+
+.site-agency-spacing{
+  margin-top: 15px;
+}
+
+.reversal-submit {
+  margin-bottom: 30px;
+}
+
+
+/**************** Dispense Order **************/
+
+
+
+
+/******* blue button styles *********/
+
+.flex {
+  display: flex;
+}
+
+.flex-spread {
+  justify-content: space-between;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.bottom-nav {
+  padding-top: rem-calc(50px);
+}
+
+.blue-button {
+  width: 155px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff;
+}
+
+.individual-nav {
+  background-color: $white;
+  border: none;
+}
