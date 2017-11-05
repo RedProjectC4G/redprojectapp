@@ -7,6 +7,10 @@ $light_gray: #9b9b9b;
 $medium_gray: #757575;
 $background-color: $white;
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 /******************* NAVIGATION *****************/
 
 
@@ -20,7 +24,7 @@ $background-color: $white;
 
 .navbar-default,
 .navbar-nav li a{
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #424242 !important;
 }
@@ -33,7 +37,7 @@ $background-color: $white;
 
 
 
-/*************** Homepage *******************/
+/*************** Homepage Search *******************/
 
 .codeSearch {
   font-size: 20px;
@@ -44,14 +48,14 @@ $background-color: $white;
 
 .participantFindButton {
   position: relative;
-  top: 25px;
+  top: 22px;
     @media (max-width: 972px) {
       top: 0px;
     }
 }
 
 .headline {
-  font-family: Roboto;
+  font-family: 'Roboto';
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
@@ -74,13 +78,11 @@ hr {
 
 .individual-name {
   h1 {
-    font-family: Roboto;
     font-size: 24px;
     font-weight: 400;
     line-height: 1.33;
     .individual-id-num {
       padding-left: 15px;
-      font-family: Roboto;
       font-size: 16px;
       font-weight: 300;
       line-height: 1.5;
@@ -88,7 +90,6 @@ hr {
     }
     .edit-individual {
       padding-left: 15px;
-      font-family: Roboto;
       font-size: 16px;
       line-height: 1.5;
       text-align: left;
@@ -100,14 +101,12 @@ hr {
 
 .individual-info-header>th {
   color: $light_gray;
-  font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
 }
 
 .individual-info>td {
   padding-bottom: 20px;
-  font-family: Roboto;
   font-size: 16px;
   font-weight: 400;
 }
@@ -130,5 +129,46 @@ table {
         width: 15%;
     }
   }
+}
+
+/**************** New Client Form *************/
+
+.new-participant{
+  margin-bottom: -15px;;
+  font-size: 24px;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.demographic-header{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.residence {
+  margin-bottom: 20px;
+}
+
+.submit-intake-row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*************** Risk Assessment Form ***********/
+
+.risk-heading{
+  margin-bottom: -15px;;
+  font-size: 24px;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.drug-heading{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.87);
 }
 
