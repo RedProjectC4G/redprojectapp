@@ -1,86 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
 
-    <title>Red Project Management || Reversal Report</title>
+  <title>Red Project Management || Reversal Report</title>
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
 
-    <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet">
 
-
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href=""><img src="../images/logo.png" alt="Red Project Logo">
+        <a class="navbar-brand" href=""><img src="../images/logo.png" alt="Red Project Logo">
             </a>
-          </div>
-          <div id="navbar1" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Participant Search</a></li>
-              <li><a href="dispenseorder.html">Dispense Order</a></li>
-              <li><a href="reversalreport.html">Reversal Report</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="login.html">Login</a></li>
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
-        </div>
-        <!--/.container-fluid -->
-      </nav>
+      </div>
+      <div id="navbar1" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Participant Search</a></li>
+          <li><a href="dispenseorder.html">Dispense Order</a></li>
+          <li><a href="reversalreport.html" class="active-nav">Reversal Report</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
 
-      
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-4">
-            <h1 class="risk-heading">Reversal Report</h1>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <h1 class="risk-heading">Reversal Report</h1>
+      </div>
+    </div>
+
+
+    <div class='row'>
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+
+    <form action="" method="post">
+      <div class="row">
+        <div class="col-md-6 gender-row">
+          <label class="control-label headline">Gender</label>
+          <div class="form-group">
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" value="male" name="gender">Male</label>
+              <label class="radio-inline"><input type="radio" value="female" name="gender">Female</label>
+              <label class="radio-inline"><input type="radio" value="non-binary" name="gender">Non-binary</label>
+            </div>
+            <!-- /input-group -->
           </div>
         </div>
-     
-
-      <div class='row'>
-        <div class="col-md-12">
-          <hr>   
-        </div>
+        <!-- /.col-lg-6 -->
       </div>
 
-      <form action="" method="post">
-        <div class="row">
-          <div class="col-md-6 gender-row">
-            <label class="control-label headline">Gender</label>
-            <div class="form-group">
-              <div class="input-group">
-                <label class="radio-inline"><input type="radio" value="male" name="gender">Male</label>
-                <label class="radio-inline"><input type="radio" value="female" name="gender">Female</label>
-                <label class="radio-inline"><input type="radio" value="non-binary" name="gender">Non-binary</label>
-              </div><!-- /input-group -->
-            </div>
-          </div><!-- /.col-lg-6 -->
-        </div>
-
-        <div class="row">
-            <div class="col-md-2">
-              <div class="form-group has-feedback">
-                <label class="control-label control-label headline" for="firstInitial">First Initial</label>
-                <select name="firstInitial" class="form-control" id="firstInitial">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group has-feedback">
+            <label class="control-label control-label headline" for="firstInitial">First Initial</label>
+            <select name="firstInitial" class="form-control" id="firstInitial">
                   <option value="" selected disabled hidden>Initial</option>
                   <option>A</option>
                   <option>B</option>
@@ -109,17 +111,17 @@
                   <option>Y</option>
                   <option>Z</option>
                 </select>
-              </div>
-            </div>
-          </div>  
+          </div>
+        </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-4">
-            <div class="form-group">
-              <label class="control-label headline">Birthday</label>
-              <div class="row">
-                <div class="col-md-4">
-                  <select name="month" class="form-control" id="month">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label headline">Birthday</label>
+            <div class="row">
+              <div class="col-md-4">
+                <select name="month" class="form-control" id="month">
                     <option value="" selected disabled hidden>Month</option>
                     <option>1</option>
                     <option>2</option>
@@ -135,9 +137,9 @@
                     <option>12</option>
                   </select>
                 </div>
-                
-                <div class="col-md-4">
-                  <select name="day" class="form-control" id="day">
+
+              <div class="col-md-4">
+                <select name="day" class="form-control" id="day">
                     <option value="" selected disabled hidden>Date</option>
                     <option>1</option>
                     <option>2</option>
@@ -171,23 +173,23 @@
                     <option>30</option>
                     <option>31</option>
                   </select>
-                </div>
-    
-                <div class="col-md-4">
-                  <select name="yearpicker" class="form-control" id="yearpicker">
+              </div>
+
+              <div class="col-md-4">
+                <select name="yearpicker" class="form-control" id="yearpicker">
                   <option value="" selected disabled hidden>Year</option>
                   </select>
-                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="row">
-          <div class="col-md-2">
-            <div class="form-group has-feedback">
-              <label class="control-label control-label headline" for="motherInitial">Mother's First Initial</label>
-              <select name="motherInitial" class="form-control" id="motherInitial">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group has-feedback">
+            <label class="control-label control-label headline" for="motherInitial">Mother's First Initial</label>
+            <select name="motherInitial" class="form-control" id="motherInitial">
                 <option value="" selected disabled hidden>Initial</option>
                 <option>A</option>
                 <option>B</option>
@@ -216,62 +218,301 @@
                 <option>Y</option>
                 <option>Z</option>
               </select>
+          </div>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class="col-md-12">
+          <hr>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="headline" for="overdoseDate">Overdose Date</label>
+            <input type="date" class="form-control" id="overdoseDate">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">Site/Agency</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">County</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="Kent">Kent</label>
+              <label class="radio-inline"><input type="radio" name="" value="Ottawa">Ottawa</label>
+              <label class="radio-inline"><input type="radio" name="" value="Muskegon">Muskegon</label>
+              <label class="radio-inline"><input type="radio" name="" value="Lake/Mason/Oceana">Lake/Mason/Oceana</label>
+              <label class="radio-inline"><input type="radio" name="" value="Allegan">Allegan</label>
             </div>
           </div>
-        </div>   
+        </div>
+      </div>
 
-        <div class='row'>
-          <div class="col-md-12">
-            <hr>   
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">Employee Initials</label>
+            <input type="text" class="form-control">
           </div>
-        </div> 
+        </div>
+      </div>
 
-        <div class="row">
-            <div class="col-md-3 gender-row">
-              <div class="form-group">
-                <label  class="headline" for="overdoseDate">Overdose Date</label>
-                <input type="date" class="form-control" id="overdoseDate">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">Cause of Overdose (Choose all that apply)</label>
+            <div class="input-group">
+              <div class="checkbox">
+                <label><input type="checkbox" value="Heroin">Heroin</label>
               </div>
-            </div> 
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                <label class="control-label headline">Location</label>
-                <div class="input-group">
-                  <label class="radio-inline"><input type="radio" name="" value="Kent">Kent</label>
-                  <label class="radio-inline"><input type="radio" name="" value="Ottawa">Ottawa</label>
-                  <label class="radio-inline"><input type="radio" name="" value="Muskegon">Muskegon</label>
-                  <label class="radio-inline"><input type="radio" name="" value="Lake/Mason/Oceana">Lake/Mason/Oceana</label>
-                  <label class="radio-inline"><input type="radio" name="" value="Allegan">Allegan</label>
-                </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Methadone-Prescription">Methadone-Prescription</label>
               </div>
-            </div> 
-          </div>
-
-          <div class="row">
-            <div class="col-md-3">
-              <div class="form-group">
-                <label  class="headline" for="name">Site/Agency</label>
-                <input type="text" class="form-control" id="name">
+              <div class="checkbox">
+                <label><input type="checkbox" value="Methadone-Street">Methadone-Street</label>
               </div>
-            </div> 
+              <div class="checkbox">
+                <label><input type="checkbox" value="Cocaine">Cocaine</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Crack">Crack</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Benzos-Prescription">Benzos (Valum, Xanas, Klonopin...) - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Benzos-Street">Benzos (Valum, Xanas, Klonopin...) - Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="PrescriptionOpiods-Prescription">Prescription Opioids - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="PCP">PCP</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Alcohol">Alcohol</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Speed-Prescription">Speed (Crystal, Adderal, Ritalin...) - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Speed-Street">Speed (Crystal, Adderal, Ritalin...) - Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Unknown-Street">Unknown - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Unknown-Street">Unknown - Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Other">Other Drugs</label>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
 
-
-        <div class="row">
-          <div class="col-md-1">
-              <input type="submit" class="btn btn-primary reversal-submit" value="Submit">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">Other drugs being used (Choose all that apply)</label>
+            <div class="input-group">
+              <div class="checkbox">
+                <label><input type="checkbox" value="Heroin">Heroin</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Methadone-Prescription">Methadone-Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Methadone-Street">Methadone-Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Cocaine">Cocaine</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Crack">Crack</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Benzos-Prescription">Benzos (Valum, Xanas, Klonopin...) - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Benzos-Street">Benzos (Valum, Xanas, Klonopin...) - Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="PrescriptionOpiods-Prescription">Prescription Opioids - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="PCP">PCP</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Alcohol">Alcohol</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Speed-Prescription">Speed (Crystal, Adderal, Ritalin...) - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Speed-Street">Speed (Crystal, Adderal, Ritalin...) - Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Unknown-Street">Unknown - Prescription</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Unknown-Street">Unknown - Street</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="Other">Other Drugs</label>
+              </div>
+            </div>
           </div>
-        </div> 
-      </form>        
-    </div>  
+        </div>
+      </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../js/jquery/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">How long unresponsive before Naloxone used?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="0-5">&lt; 15</label>
+              <label class="radio-inline"><input type="radio" name="" value="5-15">5-15</label>
+              <label class="radio-inline"><input type="radio" name="" value="15+">&gt; 15</label>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </body>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">How much Naloxone was needed?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="1cc">1cc</label>
+              <label class="radio-inline"><input type="radio" name="" value="2cc">2cc</label>
+              <label class="radio-inline"><input type="radio" name="" value="3cc">3cc</label>
+              <label class="radio-inline"><input type="radio" name="" value="3cc+">&gt; 3cc</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">How was the Naloxone administered?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="Intramuscular">Intramuscular</label>
+              <label class="radio-inline"><input type="radio" name="" value="Intravenous">Intravenous</label>
+              <label class="radio-inline"><input type="radio" name="" value="Intranasal">Intranasal</label>
+              <label class="radio-inline"><input type="radio" name="" value="Other">Other</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="headline">Did you do rescue breathing?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="Yes">Yes</label>
+              <label class="radio-inline"><input type="radio" name="" value="No">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="headline">Did you do use a rescue breathing barrier?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="Yes">Yes</label>
+              <label class="radio-inline"><input type="radio" name="" value="No">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="headline">Did the overdose return as the naloxone wore off?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="Yes">Yes</label>
+              <label class="radio-inline"><input type="radio" name="" value="No">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="headline">How long did it take for the overdose to return?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="0-30">&lt; 30 Minutes</label>
+              <label class="radio-inline"><input type="radio" name="" value="30-60">30 - 60 Minutes</label>
+              <label class="radio-inline"><input type="radio" name="" value="60+">&gt; 60 Minutes</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="headline">Did you call 911?</label>
+            <div class="input-group">
+              <label class="radio-inline"><input type="radio" name="" value="Yes">Yes</label>
+              <label class="radio-inline"><input type="radio" name="" value="No">No</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">Zip Code where reversal took place</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label headline">Notes</label>
+            <textarea class="form-control" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-1">
+          <button type="submit" class="btn btn-block btn-primary reversal-submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="../js/jquery/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+
+</body>
