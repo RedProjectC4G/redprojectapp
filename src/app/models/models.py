@@ -97,6 +97,7 @@ class SyringeAccessModel(BaseModel):
     seconday_syringe_exchange = db.Column(db.Integer)
     referral_notes = db.Column(db.Text)
     general_notes = db.Column(db.Text)
+    location_id = db.Column(db.Integer, db.ForeignKey("locations.id"))
     other_location = db.Column(db.String)
     employee_initials = db.Column(db.String)
 
