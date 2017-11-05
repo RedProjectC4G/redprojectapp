@@ -18,7 +18,7 @@
   border-width: 3px;
   font-weight: bold; }
 
-/***************Visits Information Page********/
+/***************Exisiting Client Information Page********/
 .individual-name h1 {
   font-size: 24px;
   font-weight: 400;
@@ -62,7 +62,7 @@ table {
     table tr td {
       width: 15%; }
 
-/*****Table styling *******/
+/***** Exisiting Client Page Table styling *******/
 table {
   text-align: center;
   border-collapse: collapse;
@@ -110,7 +110,7 @@ table {
   table tr :nth-of-type(13) {
     width: 6.66%; }
 
-/*************** Homepage Search *******************/
+/*************** Homepage Participant Search *******************/
 .codeSearch {
   font-size: 20px;
   font-weight: 400;
@@ -119,7 +119,7 @@ table {
 
 .participantFindButton {
   position: relative;
-  top: 22px; }
+  top: 28px; }
 
 @media (max-width: 972px) {
   .participantFindButton {
@@ -141,7 +141,35 @@ hr {
 .infoFindButton {
   margin-bottom: 50px; }
 
-/*****Table styling *******/
+/******* Exisiting Client Page blue button styles *********/
+.flex {
+  display: flex; }
+
+.flex-spread {
+  justify-content: space-between; }
+
+.flex-center {
+  justify-content: center; }
+
+.bottom-nav {
+  padding-top: 5rem; }
+
+.blue-button {
+  width: 155px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff; }
+
+.individual-nav {
+  background-color: #ffffff;
+  border: none; }
+
+/***** Exisitng Client Visit Table styling *******/
 .client-display {
   /*TODO: if have time later fix with in tables so do not have to use important*/ }
 
@@ -207,7 +235,16 @@ tr
 .client-display table tr :nth-of-type(13) {
   width: 6.66%; }
 
-/********Participant Info Styling ************/
+.nav-row {
+  margin-top: 25px; }
+
+.add-visit-btn {
+  max-height: 40px; }
+
+.firstInitialCircle {
+  font-weight: 700; }
+
+/******** Participant Info Styling ************/
 .participant-info .individual-name h1 {
   font-size: 24px;
   font-weight: 400;
@@ -312,33 +349,6 @@ tr
   margin-top: 15px; }
 
 .reversal-submit {
-  margin-bottom: 30px; }
+  margin-bottom: 35px; }
 
 /**************** Dispense Order **************/
-/******* blue button styles *********/
-.flex {
-  display: flex; }
-
-.flex-spread {
-  justify-content: space-between; }
-
-.flex-center {
-  justify-content: center; }
-
-.bottom-nav {
-  padding-top: 5rem; }
-
-.blue-button {
-  width: 155px;
-  height: 38px;
-  border-radius: 4px;
-  background-color: #2196f3;
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  color: #ffffff; }
-
-.individual-nav {
-  background-color: #ffffff;
-  border: none; }
