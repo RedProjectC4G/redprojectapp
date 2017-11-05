@@ -86,7 +86,7 @@ hr {
       font-size: 16px;
       font-weight: 300;
       line-height: 1.5;
-      color: #999999;
+      color: #999999; 
     }
     .edit-individual {
       padding-left: 15px;
@@ -158,6 +158,21 @@ table {
 
 /*************** Risk Assessment Form ***********/
 
+
+.radio-spacing,
+.date-spacing {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.year-spacing {
+  top: 10px;
+}
+
+.headline-space {
+  margin-top: 10px;
+}
+
 .risk-heading{
   margin-bottom: -15px;;
   font-size: 24px;
@@ -172,3 +187,17 @@ table {
   color: rgba(0, 0, 0, 0.87);
 }
 
+.submit-assessment-row {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/************** Reversal Report ***************/
+
+.site-agency-spacing{
+  margin-top: 15px;
+}
+
+.reversal-submit {
+  margin-bottom: 30px;
+}
