@@ -33,16 +33,18 @@ def upgrade():
             {'id':3, 'name':'Methadone', 'category':'Prescription'},
             {'id':4, 'name':'Cocaine', 'category':'Street'},
             {'id':5, 'name':'Crack', 'category':'Street'},
-            {'id':6, 'name':'Benzodiazepine', 'category':'Street'},
-            {'id':7, 'name':'Benzodiazepine', 'category':'Prescription'},
-            {'id':8, 'name':'Alcohol', 'category':'Street'},
-            {'id':9, 'name':'Clonodine', 'category':'Street'},
-            {'id':10, 'name':'Clonodine', 'category':'Prescription'},
-            {'id':11, 'name':'Speed', 'category':'Street'},
-            {'id':12, 'name':'Speed', 'category':'Prescription'},
-            {'id':13, 'name':'PCP', 'category':'Street'},
+            {'id':6, 'name':'Benzos (Valum, Xanas, Klonopin...)', 'category':'Street'},
+            {'id':7, 'name':'Benzos (Valum, Xanas, Klonopin...)', 'category':'Prescription'},
+            {'id':8, 'name':'Prescription opioids', 'category':'Prescription'},
+            {'id':9, 'name':'Prescription opioids', 'category':'Street'},
+            {'id':10, 'name':'PCP', 'category':'Street'},
+            {'id':11, 'name':'Alcohol', 'category':'Street'},
+            {'id':12, 'name':'Speed (Crystal, Adderal, Ritalin...)', 'category':'Street'},
+            {'id':13, 'name':'Speed (Crystal, Adderal, Ritalin...)', 'category':'Prescription'},
             {'id':14, 'name':'Unknown', 'category':'Street'},
-            {'id':15, 'name':'Unknown', 'category':'Prescription'}
+            {'id':15, 'name':'Unknown', 'category':'Prescription'},
+            {'id':16, 'name':'Other Drugs', 'category':'Street'},
+            {'id':17, 'name':'Other Drugs', 'category':'Prescription'}
         ]
     )
 
