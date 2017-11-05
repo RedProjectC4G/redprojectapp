@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+
+  <title>Red Project Management</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+        <a class="navbar-brand" href=""><img src="images/logo.png" alt="Red Project Logo">
+            </a>
+      </div>
+      <div id="navbar1" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Participant Search</a></li>
+          <li><a href="dispenseorder.html">Dispense Order</a></li>
+          <li><a href="reversalreport.html">Reversal Report</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="flex flex-spread bottom-nav">
+        <div class="col-md-6 individual-name">
+          <h1>D
+            <span class="individual-id-num">TK421</span>
+          </h1>
+        </div>
+        <button class="blue-button flex flex-center edit-button"> Edit </button>
+      </div>
+
+    </div>
+    <div class="row individual-table-row">
+      <div class="col-md-10">
+        <table class="">
+          <thead>
+            <tr class="individual-info-header">
+              <th>Date of Birth</th>
+              <th>Current Residence</th>
+              <th>Zip Code</th>
+              <th>Last Visit</th>
+              <th>Medical Expenses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="individual-info">
+              <td scope="row">1/02/1980 (37)</th>
+                <td>Holland</td>
+                <td>06010</td>
+                <td>10/20/2017</td>
+                <td>Medicare</td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr class="individual-info-header">
+              <th>No. of Dependents</th>
+              <th>Race/Ethnicity</th>
+              <th>Annual Income</th>
+              <th>Mother's First Initial</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="individual-info">
+              <td scope="row">3</th>
+                <td>Other</td>
+                <td>26,000</td>
+                <td>Q</td>
+                <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- bottom grid nav and button -->
+    <div class="flex flex-spread bottom-nav">
+      <nav class="navbar navbar-default individual-nav">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar1" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Visits</a></li>
+            <li><a href="index.html">Risk Assesments</a></li>
+            <li><a href="dispenseorder.html">Dispense Reports</a></li>
+            <li><a href="reversalreport.html">Reversal Reports</a></li>
+          </ul>
+
+        </div>
+        <!--/.nav-collapse -->
+        <!--/.container-fluid -->
+      </nav>
+      <button class="blue-button flex flex-center"> Add New Visit </button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>SC</th>
+          <th>OD Kits</th>
+          <th>ET 28g 1/2" 1cc</th>
+          <th>ET 30g 5/16" 1cc</th>
+          <th>BD/ET 27g 1/2" 1cc</th>
+          <th>Total</th>
+          <th>BD 1/2 cc</th>
+          <th>3 cc </th>
+          <th>Total</th>
+          <th>SSE People</th>
+          <th>Referral Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr key="uniqueKey">
+          <td> 11/01/2017 </td>
+          <td> Yes </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> Notes... </td>
+          <td>
+            <a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="pencil-icon"></span></a>
+          </td>
+        </tr>
+        <tr key="uniqueKey2">
+          <td> 11/01/2017 </td>
+          <td> Yes </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> Notes... </td>
+          <td>
+            <a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="pencil-icon"></span></a>
+          </td>
+        </tr>
+        <tr key="uniqueKey3">
+          <td> 11/01/2017 </td>
+          <td> Yes </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> Notes... </td>
+          <td>
+            <a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="pencil-icon"></span></a>
+          </td>
+        </tr>
+        <tr key="uniqueKey4">
+          <td> 11/01/2017 </td>
+          <td> Yes </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> 00 </td>
+          <td> 60 </td>
+          <td> 00 </td>
+          <td> Notes... </td>
+          <td>
+            <a href=""><span class="glyphicon glyphicon-pencil" aria-hidden="pencil-icon"></span></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
+</body>
