@@ -12,6 +12,11 @@
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #424242 !important; }
+  .navbar-default .active-nav,
+  .navbar-nav li a .active-nav {
+    border-bottom-style: solid;
+    border-width: 3px;
+    font-weight: bold; }
 
 .navbar-nav li:hover {
   border-bottom-style: solid;
@@ -119,7 +124,7 @@ table {
 
 .participantFindButton {
   position: relative;
-  top: 22px; }
+  margin-top: 28px; }
 
 @media (max-width: 972px) {
   .participantFindButton {
