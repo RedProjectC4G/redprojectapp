@@ -169,3 +169,32 @@ table {
 img {
   height: 20px !important;
   width: 20px !important; }
+
+/* flex display */
+/******* blue button styles *********/
+.flex {
+  display: flex; }
+
+.flex-spread {
+  justify-content: space-between; }
+
+.flex-center {
+  justify-content: center; }
+
+.bottom-nav {
+  padding-top: 5rem; }
+
+.blue-button {
+  width: 155px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #2196f3;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff; }
+
+.individual-nav {
+  background-color: #ffffff;
+  border: none; }
