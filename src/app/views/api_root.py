@@ -1,4 +1,4 @@
-from flask import Blueprint, url_for
+from flask import Blueprint
 from flask_api import status
 from ..models import ClientUserModel
 

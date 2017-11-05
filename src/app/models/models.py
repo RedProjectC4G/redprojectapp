@@ -16,6 +16,35 @@ class BaseModel(db.Model):
             for column, value in self._to_dict().items()
         })
 
+
+class AdminUserModel(BaseModel):
+    __tablename__ = 'admin_users'
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String)
+    password = db.Column(db.String)
+
+    @property
+    def is_active(self):
+        """True, as all users are active."""
+        return True
+
+    @property
+    def get_id(self):
+        """Return the username to satisfy Flask-Login's requirements."""
+        return self.username
+
+    @property
+    def is_authenticated(self):
+        """Return True if the user is authenticated."""
+        return self.authenticated
+
+    @property
+    def is_anonymous(self):
+        """False, as anonymous users aren't supported."""
+        return False
+
+
 class ClientUserModel(BaseModel):
     """ Holds the 8 digit code for users that are using the client """
     __tablename__ = 'client_users'

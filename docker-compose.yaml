@@ -10,6 +10,8 @@ services:
       - ./src:/srv/www/redproject
     working_dir: /srv/www/redproject
     command: python manage.py run
+    links:
+      - db:postgres
   db:
     image: postgres:9.6-alpine
     ports:
