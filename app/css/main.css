@@ -18,37 +18,6 @@
   border-width: 3px;
   font-weight: bold; }
 
-/*************** Homepage Search *******************/
-.codeSearch {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: rgba(0, 0, 0, 0.87); }
-
-.participantFindButton {
-  position: relative;
-  top: 22px; }
-  @media (max-width: 972px) {
-    .participantFindButton {
-      top: 0px; } }
-
-.headline {
-  font-family: "Roboto";
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #373a3c;
-  margin-bottom: -8px; }
-
-.gender-row {
-  margin-top: 15px; }
-
-hr {
-  margin-bottom: 0; }
-
-.infoFindButton {
-  margin-bottom: 50px; }
-
 /***************Visits Information Page********/
 .individual-name h1 {
   font-size: 24px;
@@ -93,61 +62,6 @@ table {
     table tr td {
       width: 15%; }
 
-/**************** New Client Form *************/
-.new-participant {
-  margin-bottom: -15px;
-  font-size: 24px;
-  line-height: 1.33;
-  color: rgba(0, 0, 0, 0.87); }
-
-.demographic-header {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: rgba(0, 0, 0, 0.87); }
-
-.residence {
-  margin-bottom: 20px; }
-
-.submit-intake-row {
-  margin-top: 30px;
-  margin-bottom: 30px; }
-
-/*************** Risk Assessment Form ***********/
-.radio-spacing,
-.date-spacing {
-  margin-top: 10px;
-  margin-bottom: 10px; }
-
-.year-spacing {
-  top: 10px; }
-
-.headline-space {
-  margin-top: 10px; }
-
-.risk-heading {
-  margin-bottom: -15px;
-  font-size: 24px;
-  line-height: 1.33;
-  color: rgba(0, 0, 0, 0.87); }
-
-.drug-heading {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.4;
-  color: rgba(0, 0, 0, 0.87); }
-
-.submit-assessment-row {
-  margin-top: 30px;
-  margin-bottom: 30px; }
-
-/************** Reversal Report ***************/
-.site-agency-spacing {
-  margin-top: 15px; }
-
-.reversal-submit {
-  margin-bottom: 30px; }
-
 /*****Table styling *******/
 table {
   text-align: center;
@@ -180,79 +94,21 @@ table {
     text-align: center; }
   table tr :nth-of-type(1) {
     width: 9.99%; }
-  table tr :nth-of-type(2),
-:nth-of-type(3),
-:nth-of-type(4),
-:nth-of-type(5),
-:nth-of-type(6),
-:nth-of-type(7),
-:nth-of-type(8),
-:nth-of-type(9),
-:nth-of-type(10),
+  table tr :nth-of-type(2)
+:nth-of-type(3)
+:nth-of-type(4)
+:nth-of-type(5)
+:nth-of-type(6)
+:nth-of-type(7)
+:nth-of-type(8)
+:nth-of-type(9)
+:nth-of-type(10)
 :nth-of-type(11) {
     width: 6.66%; }
   table tr :nth-of-type(12) {
     width: 16.65%; }
   table tr :nth-of-type(13) {
     width: 6.66%; }
-
-/*TODO: if have time later fix with in tables so do not have to use important*/
-img {
-  height: 20px !important;
-  width: 20px !important; }
-
-/* flex display */
-/******* blue button styles *********/
-.flex {
-  display: flex; }
-
-.flex-spread {
-  justify-content: space-between; }
-
-.flex-center {
-  justify-content: center; }
-
-.bottom-nav {
-  padding-top: 5rem; }
-
-.blue-button {
-  width: 155px;
-  height: 38px;
-  border-radius: 4px;
-  background-color: #2196f3;
-  font-family: Roboto;
-  font-size: 16px;
-  line-height: 1.25;
-  text-align: center;
-  color: #ffffff; }
-
-.individual-nav {
-  background-color: #ffffff;
-  border: none; }
-
-/******* STYLING VARIABLES ********/
-/****** Pixel size responsive to screen ******/
-/******************* NAVIGATION *****************/
-.navbar-brand img {
-  position: relative;
-  top: -10px;
-  width: 130px;
-  height: 45px; }
-
-.navbar-default,
-.navbar-nav li a {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  color: #424242 !important; }
-
-.navbar-nav li:hover {
-  border-bottom-style: solid;
-  border-width: 3px;
-  font-weight: bold; }
-
-.navbar-nav li:hover {
-  border-bottom-style: solid;
-  border-width: 3px; }
 
 /*************** Homepage Search *******************/
 .codeSearch {
@@ -334,15 +190,15 @@ hr {
 .client-display
 table
 tr
-:nth-of-type(2),
-:nth-of-type(3),
-:nth-of-type(4),
-:nth-of-type(5),
-:nth-of-type(6),
-:nth-of-type(7),
-:nth-of-type(8),
-:nth-of-type(9),
-:nth-of-type(10),
+:nth-of-type(2)
+:nth-of-type(3)
+:nth-of-type(4)
+:nth-of-type(5)
+:nth-of-type(6)
+:nth-of-type(7)
+:nth-of-type(8)
+:nth-of-type(9)
+:nth-of-type(10)
 :nth-of-type(11) {
   width: 6.66%; }
 
@@ -351,10 +207,6 @@ tr
 
 .client-display table tr :nth-of-type(13) {
   width: 6.66%; }
-
-.client-display img {
-  height: 20px !important;
-  width: 20px !important; }
 
 /********Participant Info Styling ************/
 .participant-info .individual-name h1 {
@@ -426,6 +278,20 @@ tr
   margin-bottom: 30px; }
 
 /*************** Risk Assessment Form ***********/
+.radio-spacing,
+.date-spacing {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.year-spacing {
+  top: 10px; }
+
+.headline-space {
+  margin-top: 10px; }
+
+.risk-heading {
+  margin-bottom: -15px; }
+
 .risk-heading {
   margin-bottom: -15px;
   font-size: 24px;
@@ -438,6 +304,18 @@ tr
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.87); }
 
+.submit-assessment-row {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+/************** Reversal Report ***************/
+.site-agency-spacing {
+  margin-top: 15px; }
+
+.reversal-submit {
+  margin-bottom: 30px; }
+
+/**************** Dispense Order **************/
 /******* blue button styles *********/
 .flex {
   display: flex; }
@@ -465,4 +343,3 @@ tr
 .individual-nav {
   background-color: #ffffff;
   border: none; }
-

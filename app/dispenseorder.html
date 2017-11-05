@@ -62,7 +62,7 @@
         <form action="" method="post">
           <div class="row">
             <div class="col-md-6 gender-row">
-              <label class="control-label">Gender</label>
+              <label class="control-label headline">Gender</label>
               <div class="form-group">
                 <div class="input-group">
                   <label class="radio-inline"><input type="radio" value="male" name="gender">Male</label>
@@ -76,7 +76,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Full Name</label>
+                <label class="control-label headline" for="name">Full Name</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -84,68 +84,9 @@
 
           <div class="row">
             <div class="form-group clearfix">
-              <div class="col-md-1">
-                <label class="control-label" for="month">Date of Birth</label>
-                <select name="month" class="form-control" id="month">
-                  <option value="" selected disabled hidden>Month</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                </select>
-              </div>
-              
-              <div class="col-md-1">
-                <label for="date"></label>
-                <select name="date" class="form-control" id="date">
-                  <option value="" selected disabled hidden>Day</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                  <option>13</option>
-                  <option>14</option>
-                  <option>15</option>
-                  <option>16</option>
-                  <option>17</option>
-                  <option>18</option>
-                  <option>19</option>
-                  <option>20</option>
-                  <option>21</option>
-                  <option>22</option>
-                  <option>23</option>
-                  <option>24</option>
-                  <option>25</option>
-                  <option>26</option>
-                  <option>27</option>
-                  <option>28</option>
-                  <option>29</option>
-                  <option>30</option>
-                  <option>31</option>
-                </select>
-              </div>
-
-              <div class="col-md-1">
-                <label for="year"></label>
-                <select name="yearpicker" class="form-control" id="yearpicker">
-                  <option value="" selected disabled hidden>Year</option>
-                </select>
+              <div class="col-md-3">
+                <label class="control-label headline" for="month">Date of Birth</label>
+                <input type="date" class="form-control" id="name">
               </div>
             </div>
           </div>
@@ -153,7 +94,7 @@
           <div class="row">
             <div class="col-md-2">
               <div class="form-group has-feedback">
-                <label class="control-label control-label" for="motherInitial">Mother's First Initials</label>
+                <label class="control-label control-label headline" for="motherInitial">Mother's First Initials</label>
                 <select name="motherInitial" class="form-control" id="motherInitial">
                   <option value="" selected disabled hidden>Initial</option>
                   <option>A</option>
@@ -187,48 +128,13 @@
             </div>
           </div>   
 
-          <!-- <div class="row ">
-            <div class="form-group">
-              <div class="col-md-10">
-                <label class="control-label">Race/Ethnicity</label>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Asian</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Black/African-American</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Latino/Hispanic</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Native Hawaiian/Pacific Islander</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Native American/First Nations/First People/Alaskan Native</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Middle Eastern/North African</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">White/Caucasian</label>
-                </div>
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Bi-racial/Multi-ethnic</label>
-                </div>
-                 <div class="checkbox">
-                  <label><input type="checkbox" value="">Prefer not to answer</label>
-                </div>
-              </div>
-            </div>
-          </div>    -->
-
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Do you know someone at risk for overdose?</label>
+                <label class="control-label headline">Do you know someone at risk for overdose?</label>
                 <div class="input-group">
-                  <label class="radio-inline"><input type="radio" value="">Yes</label>
-                  <label class="radio-inline"><input type="radio" value="">No</label>
+                  <label class="radio-inline"><input type="radio" value="" name="risk">Yes</label>
+                  <label class="radio-inline"><input type="radio" value="" name="risk">No</label>
                 </div>
               </div>
             </div> 
@@ -237,7 +143,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Current opiod use?</label>
+                <label class="control-label headline" for="name">Current opiod use?</label>
                 <select name="currentOpiodUse" class="form-control" id="currentOpiodUse">
                   <option>Heroin</option>
                   <option>Methadone - Prescription</option>
@@ -265,7 +171,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Other recent substance use</label>
+                <label class="control-label headline" for="name">Other recent substance use</label>
                 <select name="currentOpiodUse" class="form-control" id="currentOpiodUse">
                   <option>Heroin</option>
                   <option>Methadone - Prescription</option>
@@ -294,10 +200,10 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Did you use these substances more than 1-2 times/month</label>
+                <label class="control-label headline">Did you use these substances more than 1-2 times/month</label>
                 <div class="input-group">
-                    <label class="radio-inline"><input type="radio" value="">Yes</label>
-                    <label class="radio-inline"><input type="radio" value="">No</label>
+                    <label class="radio-inline"><input type="radio" value="" name="use">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="use" value="">No</label>
                   </div>
               </div>
             </div> 
@@ -306,10 +212,10 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Recent period of abstinence from opiods (in last 3 months)</label>
+                <label class="control-label headline">Recent period of abstinence from opiods (in last 3 months)</label>
                 <div class="input-group">
-                    <label class="radio-inline"><input type="radio" value="">Yes</label>
-                    <label class="radio-inline"><input type="radio" value="">No</label>
+                    <label class="radio-inline"><input type="radio" name="abstinence"value="">Yes</label>
+                    <label class="radio-inline"><input type="radio" name="abstinence" value="">No</label>
                   </div>
               </div>
             </div> 
@@ -319,7 +225,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">When</label>
+                <label class="control-label headline" for="name">When</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -328,7 +234,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Why</label>
+                <label class="control-label headline" for="name">Why</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -337,7 +243,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Number of times you've OD'd</label>
+                <label class="control-label headline" for="name">Number of times you've OD'd</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -346,7 +252,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Last time you OD'd</label>
+                <label class="control-label headline" for="name">Last time you OD'd</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -355,7 +261,7 @@
           <div class="row">
               <div class="col-md-3">
                 <div class="form-group">
-                  <label class="control-label" for="onWhat">On what?</label>
+                  <label class="control-label headline" for="onWhat">On what?</label>
                   <select name="onWhat" class="form-control" id="onWhat">
                     <option>Heroin</option>
                     <option>Methadone - Prescription</option>
@@ -383,7 +289,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Number of people you witnessed overdosing</label>
+                <label class="control-label headline" for="name">Number of people you witnessed overdosing</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -392,7 +298,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Number of people that went to the hospital</label>
+                <label class="control-label headline" for="name">Number of people that went to the hospital</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -401,7 +307,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label class="control-label" for="name">Number of people who died</label>
+                <label class="control-label headline" for="name">Number of people who died</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -410,7 +316,7 @@
           <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <label class="control-label">Prevention Training Topics</span>
+                <label class="control-label headline">Prevention Training Topics</span>
                 <div class="input-group">
                   <div class="checkbox">
                     <label><input type="checkbox" value="Quality">Quality</label>
@@ -444,7 +350,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Overdose Response (the 3 As)</label>
+                <label class="control-label headline">Overdose Response (the 3 As)</label>
                 <div class="input-group">
                   <div class="checkbox">
                     <label><input type="checkbox" value="Assess: Signs of overdose">Assess: Signs of overdose</label>
@@ -487,7 +393,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label for="name">Naloxone Lot #</label>
+                <label class="headline" for="name">Naloxone Lot #</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -495,8 +401,8 @@
 
           <div class="row">
             <div class="col-md-3">
-              <div class="form-group">
-                <label for="name">Naloxone Expiration Date</label>
+              <div class="form-group headline">
+                <label  class="headline" for="name">Naloxone Expiration Date</label>
                 <input type="date" class="form-control" id="name">
               </div>
             </div> 
@@ -505,7 +411,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label for="name">Naloxone # Dispensed</label>
+                <label  class="headline" for="name">Naloxone # Dispensed</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -514,7 +420,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label for="name">Narcan Lot #</label>
+                <label  class="headline" for="name">Narcan Lot #</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -523,7 +429,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label for="name">Narcan Expiration Date</label>
+                <label  class="headline" for="name">Narcan Expiration Date</label>
                 <input type="date" class="form-control" id="name">
               </div>
             </div> 
@@ -532,7 +438,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label for="name">Narcan # Dispensed</label>
+                <label  class="headline" for="name">Narcan # Dispensed</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 
@@ -541,10 +447,10 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label>Prescriber</label>
+                <label  class="headline" >Prescriber</label>
                 <div class="input-group">
                   <label class="radio-inline"><input type="radio" value="Cara Poland, MD">Cara Poland, MD</label>
-                  <label class="radio-inline"><input type="radio" value="Vernon Proctor, MD, MPH">Vernon Proctor, MD, MPH</label>
+                  <label  class="radio-inline"><input type="radio" value="Vernon Proctor, MD, MPH">Vernon Proctor, MD, MPH</label>
                   <label class="radio-inline"><input type="radio" value="Paul Trowbridge, MD">Paul Trowbridge, MD</label>
                 </div>
               </div>
@@ -554,7 +460,7 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label class="control-label">Location</label>
+                <label class="control-label headline">Location</label>
                 <div class="input-group">
                   <label class="radio-inline"><input type="radio" value="Kent">Kent</label>
                   <label class="radio-inline"><input type="radio" value="Ottawa">Ottawa</label>
@@ -569,7 +475,7 @@
           <div class="row">
             <div class="col-md-3">
               <div class="form-group">
-                <label for="name">Site/Agency</label>
+                <label  class="headline" for="name">Site/Agency</label>
                 <input type="text" class="form-control" id="name">
               </div>
             </div> 

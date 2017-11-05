@@ -36,9 +36,9 @@
       </div>
       <div id="navbar1" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="table.html">Participant Search</a></li>
-          <li><a href="#">Dispense Order</a></li>
-          <li><a href="#">Reversal Report</a></li>
+          <li><a href="index.html">Participant Search</a></li>
+          <li><a href="dispenseorder.html">Dispense Order</a></li>
+          <li><a href="reversalreport.html">Reversal Report</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="">Login</a></li>
@@ -49,12 +49,14 @@
     <!--/.container-fluid -->
   </nav>
 
+
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12">
         <h1 class="codeSearch">Search by Code</h1>
       </div>
     </div>
+
     <div class="row">
       <form action="" method="post">
         <div class="col-md-4">
@@ -63,20 +65,10 @@
             <input type="text" class="form-control" id="participantCodeInput" placeholder="XX0000X" />
             <i class="glyphicon glyphicon-search form-control-feedback"></i>
           </div>
-          <div id="navbar1" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Participant Search</a></li>
-              <li><a href="dispenseorder.html">Dispense Order</a></li>
-              <li><a href="reversalreport.html">Reversal Report</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="login.html">Login</a></li>
-            </ul>
-          </div>
-          <!--/.nav-collapse -->
         </div>
+
         <div class="col-md-2">
-          <button type="submit" class="btn btn-block btn-danger participantFindButton">Find</button>
+          <button type="submit" class="btn btn-block btn-primary participantFindButton">Find</button>
         </div>
       </form>
     </div>
@@ -90,58 +82,33 @@
 
     <div class="row">
       <div class="col-md-12">
-        <h1 class="codeSearch">Search by Info</h1>
+        <h1 class="codeSearch">Search by Info or Create New</h1>
       </div>
     </div>
-    <form action="" method="post">
-      <div class="row">
-        <div class="col-md-12">Gender</div>
-      </div>
-      <div class="row">
-        <form action="" method="post">
-          <div class="col-md-4">
-            <div class="form-group has-feedback">
-              <label class="control-label headline">Participant Code</label>
-              <input type="text" class="form-control" id="participantCodeInput" placeholder="XX0000X" />
-              <i class="glyphicon glyphicon-search form-control-feedback"></i>
-            </div>
-          </div>
-          <div class="col-md-2">
-            <button type="submit" class="btn btn-block btn-primary participantFindButton">Find</button>
-          </div>
-          <!-- /input-group -->
-      </div>
-      <!-- /.col-lg-6 -->
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="form-group has-feedback">
-        <label class="control-label">First Name</label>
-        <input type="text" class="form-control" id="firstName" />
-      </div>
-    </div>
-  </div>
+
+
   <form action="" method="post">
     <div class="row">
       <div class="col-md-12">
         <h2 class="headline">Gender</h2>
       </div>
     </div>
+
     <div class="row">
       <div class="col-md-6 gender-row">
         <div class="input-group">
-          <label class="radio-inline"><input type="radio" value="Male" name="male">Male</label>
-          <label class="radio-inline"><input type="radio" value="female" name="female">Female</label>
-          <label class="radio-inline"><input type="radio" value="non-binary" name="non-binary">Non-binary</label>
+          <label class="radio-inline"><input type="radio" value="Male" name="gender">Male</label>
+          <label class="radio-inline"><input type="radio" value="female" name="gender">Female</label>
+          <label class="radio-inline"><input type="radio" value="non-binary" name="gender">Non-binary</label>
         </div>
-<<<<<<< HEAD
+      </div>
+    </div>
 
-
- <div class="row">
-            <div class="col-md-12">
-              <h2 class="headline">First Initial</h2>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="headline">First Initial</h2>
+        </div>
+      </div>
 
         <div class="row">
           <div class="col-md-2">
@@ -179,26 +146,9 @@
               </div>
             </div>  
           </div>
-
-=======
-        <!-- /input-group -->
-      </div>
+      
       <!-- /.col-lg-6 -->
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="headline">First Name</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="form-group has-feedback">
-          <label class="control-label headline"></label>
-          <input type="text" class="form-control" id="firstName" />
-        </div>
-      </div>
-    </div>
->>>>>>> 7348b0309a6cccaa92b1bd88a339f08bf3b970a4
+    
 
     <div class='row'>
       <div class="col-md-12">
@@ -208,70 +158,10 @@
 
     <div class="row">
       <div class="form-group">
-        <div class="col-md-2">
+        <div class="col-md-3">
           <label for="month"></label>
-          <select name="month" class="form-control" id="month">
-                    <option value="" selected disabled hidden>Month</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                  </select>
-        </div>
-
-        <div class="col-md-2">
-          <label for="date"></label>
-          <select name="date" class="form-control" id="date">
-                    <option value="" selected disabled hidden>Date</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                    <option>13</option>
-                    <option>14</option>
-                    <option>15</option>
-                    <option>16</option>
-                    <option>17</option>
-                    <option>18</option>
-                    <option>19</option>
-                    <option>20</option>
-                    <option>21</option>
-                    <option>22</option>
-                    <option>23</option>
-                    <option>24</option>
-                    <option>25</option>
-                    <option>26</option>
-                    <option>27</option>
-                    <option>28</option>
-                    <option>29</option>
-                    <option>30</option>
-                    <option>31</option>
-                  </select>
-        </div>
-
-        <div class="col-md-2">
-          <label for="year"></label>
-          <select name="yearpicker" class="form-control" id="yearpicker">
-                <option value="" selected disabled hidden>Year</option>
-                </select>
-        </div>
-
+          <input type="date" class="form-control" id="name">
+         </div>
       </div>
     </div>
 
