@@ -1,0 +1,40 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+alembic = "==0.9.6"
+awscli = "==1.11.176"
+botocore = "==1.7.34"
+click = "==6.7"
+colorama = "==0.3.7"
+docutils = "==0.14"
+flask = "*"
+flask-api = "==1.0"
+flask-migrate = "==2.1.1"
+flask-script = "==2.0.6"
+flask-sqlalchemy = "==2.3.2"
+itsdangerous = "==0.24"
+"jinja2" = "==2.9.6"
+jmespath = "==0.9.3"
+mako = "==1.0.7"
+markupsafe = "==1.0"
+"psycopg2" = "==2.7.3.2"
+"pyasn1" = "==0.3.7"
+python-dateutil = "==2.6.1"
+python-editor = "==1.0.3"
+pyyaml = "==3.12"
+rsa = "==3.4.2"
+"s3transfer" = "==0.1.11"
+scandir = "==1.6"
+sqlalchemy = "==1.1.15"
+werkzeug = "==0.12.2"
+flask-login = "*"
+
+
+[dev-packages]
+
