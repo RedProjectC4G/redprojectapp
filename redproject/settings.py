@@ -17,12 +17,12 @@ class ProdConfig(Config):
 
     ENV = 'prod'
 
-    POSTGRES_USER = os.getenv('POSTGRES_USER')
-    POSTGRES_PW = os.getenv('POSTGRES_PW')
-    POSTGRES_HOST = os.getenv('POSTGRES_HOST')
-    POSTGRES_PORT = os.getenv('POSTGRES_PORT')
-    POSTGRES_DB_NAME = os.getenv('POSTGRES_DB_NAME')
-    SQLALCHEMY_DATABASE_URI = 'postgresql://{0}:{1}@{2}:{3}/{4}'.format(POSTGRES_USER, POSTGRES_PW, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB_NAME)
+    MONGO_USER = os.getenv('MONGO_USER')
+    MONGO_PW = os.getenv('MONGO_PW')
+    MONGO_HOST = os.getenv('MONGO_HOST')
+    MONGO_PORT = os.getenv('MONGO_PORT')
+    MONGO_DB_NAME = os.getenv('MONGO_DB_NAME')
+    MONGO_URI = 'mongodb://{0}:{1}@{2}:{3}/{4}'.format(MONGO_USER, MONGO_PW, MONGO_HOST, MONGO_PORT, MONGO_DB_NAME)
     SECRET_KEY = "r0834ht0vgb047gt"
 
 class DevConfig(Config):
@@ -32,12 +32,10 @@ class DevConfig(Config):
 
     DEBUG = True
 
-    POSTGRES_USER = 'admin'
-    POSTGRES_PW = 'admin'
-    POSTGRES_HOST = 'localhost'
-    POSTGRES_PORT = '9001'
-    POSTGRES_DB_NAME = 'red_development'
-    SQLALCHEMY_DATABASE_URI = 'postgresql://{0}:{1}@{2}:{3}/{4}'.format(POSTGRES_USER, POSTGRES_PW, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB_NAME)
+    MONGO_HOST = 'localhost'
+    MONGO_PORT = '9001'
+    MONGO_DB_NAME = 'red_development'
+    MONGO_URI = 'mongodb://{}:{}/{}'.format(MONGO_HOST, MONGO_PORT, MONGO_DB_NAME)
     SECRET_KEY = "r0834ht0vgb047gt"
 
 def get_config(name):
