@@ -1,7 +1,7 @@
 import os
 
-from app.settings import get_config
-from app.app import create_app
+from redproject.settings import get_config
+from redproject.app import create_app
 
 def find_assets():
     """Yield paths for all static files and templates."""
