@@ -33,7 +33,7 @@ class DevConfig(Config):
     DEBUG = True
 
     MONGO_HOST = 'localhost'
-    MONGO_PORT = '9001'
+    MONGO_PORT = '27017'
     MONGO_DB_NAME = 'red_development'
     MONGO_URI = 'mongodb://{}:{}/{}'.format(MONGO_HOST, MONGO_PORT, MONGO_DB_NAME)
     SECRET_KEY = "r0834ht0vgb047gt"
