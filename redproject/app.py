@@ -1,6 +1,6 @@
 import logging
 
-from flask_api import FlaskAPI
+from flask import Flask
 
 from . import views
 from . import extensions
@@ -10,7 +10,7 @@ log = logging.getLogger(__name__)
 
 
 def create_app(config):
-    app = FlaskAPI(__name__)
+    app = Flask(__name__)
     app.config.from_object(config)
 
     configure_logging(app)
