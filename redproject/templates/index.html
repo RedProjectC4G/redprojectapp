@@ -11,10 +11,10 @@
       <form action="" method="post">
         {{ form.csrf_token }}
         <div class="col-md-4">
-          <div class="form-group has-feedback">
+          <div class="form-group has-feedback {% if error %} has-error {% endif %}">
             <label class="control-label headline">Participant Code</label>
             {{ form.participant_code(placeholder='XX0000X',class_='form-control')}}
-            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+            <i class="glyphicon {% if error %} glyphicon-remove {% else %} glyphicon-search {% endif %} form-control-feedback"></i>
           </div>
         </div>
 
