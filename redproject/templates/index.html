@@ -9,16 +9,17 @@
 
     <div class="row">
       <form action="" method="post">
+        {{ form.csrf_token }}
         <div class="col-md-4">
           <div class="form-group has-feedback">
             <label class="control-label headline">Participant Code</label>
-            <input type="text" class="form-control" id="participantCodeInput" placeholder="XX0000X" />
+            {{ form.participant_code(placeholder='XX0000X',class_='form-control')}}
             <i class="glyphicon glyphicon-search form-control-feedback"></i>
           </div>
         </div>
 
         <div class="col-md-1">
-          <input type="submit" class="btn participantFindButton btn-primary" value="Find">
+          {{ form.find_by_code(class_='btn participantFindButton btn-primary')}}
         </div>
       </form>
     </div>
@@ -38,14 +39,15 @@
 
 
     <form action="" method="post">
+      {{ form.csrf_token }}
       <div class="row">
         <div class="col-md-6 gender-row">
           <label class="control-label headline">Gender</label>
           <div class="form-group">
             <div class="input-group">
-              <label class="radio-inline"><input type="radio" value="male" name="gender">Male</label>
-              <label class="radio-inline"><input type="radio" value="female" name="gender">Female</label>
-              <label class="radio-inline"><input type="radio" value="non-binary" name="gender">Non-binary</label>
+              {% for subfield in form.gender %}
+              <label class="radio-inline">{{subfield}} {{subfield.label}} </label>
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -55,35 +57,7 @@
         <div class="col-md-2">
           <div class="form-group">
             <label class="control-label headline">First Initial</label>
-            <select name="firstNameInitial" class="form-control" id="firstNameInitial">
-            <option value="" selected disabled hidden>Initial</option>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
-            <option>E</option>
-            <option>F</option>
-            <option>G</option>
-            <option>H</option>
-            <option>I</option>
-            <option>J</option>
-            <option>K</option>
-            <option>L</option>
-            <option>M</option>
-            <option>N</option>
-            <option>O</option>
-            <option>P</option>
-            <option>Q</option>
-            <option>R</option>
-            <option>S</option>
-            <option>T</option>
-            <option>U</option>
-            <option>V</option>
-            <option>W</option>
-            <option>X</option>
-            <option>Y</option>
-            <option>Z</option>
-          </select>
+            {{ form.first_name_initial(maxlength=1) }}
           </div>
         </div>
       </div>
@@ -94,64 +68,13 @@
             <label class="control-label headline">Birthday</label>
             <div class="row">
               <div class="col-md-4">
-                <select name="month" class="form-control" id="month">
-                <option value="" selected disabled hidden>Month</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-              </select>
+                {{ form.birthday_month(class_='form-control') }}
               </div>
-
               <div class="col-md-4">
-                <select name="day" class="form-control" id="day">
-                <option value="" selected disabled hidden>--</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-                <option>25</option>
-                <option>26</option>
-                <option>27</option>
-                <option>28</option>
-                <option>29</option>
-                <option>30</option>
-                <option>31</option>
-              </select>
+                {{ form.birthday_day(class_='form-control') }}
               </div>
-
               <div class="col-md-4">
-                <select name="yearpicker" class="form-control" id="yearpicker">
-              <option value="" selected disabled hidden>Year</option>
-              </select>
+                {{ form.birthday_year(class_='form-control') }}
               </div>
             </div>
           </div>
@@ -162,41 +85,13 @@
         <div class="col-md-2">
           <div class="form-group">
             <label class="control-label headline">Mother's First Initial</label>
-            <select name="motherInitial" class="form-control" id="motherInitial">
-            <option value="" selected disabled hidden>Initial</option>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
-            <option>E</option>
-            <option>F</option>
-            <option>G</option>
-            <option>H</option>
-            <option>I</option>
-            <option>J</option>
-            <option>K</option>
-            <option>L</option>
-            <option>M</option>
-            <option>N</option>
-            <option>O</option>
-            <option>P</option>
-            <option>Q</option>
-            <option>R</option>
-            <option>S</option>
-            <option>T</option>
-            <option>U</option>
-            <option>V</option>
-            <option>W</option>
-            <option>X</option>
-            <option>Y</option>
-            <option>Z</option>
-          </select>
+            {{ form.mother_first_name_initial(maxlength=1, class_='form-control') }}
           </div>
         </div>
       </div>
       <div class="row infoFindButton">
         <div class="col-md-1">
-          <input type="submit" class="btn btn-primary" value="Find/Create">
+          {{ form.find_by_parts(class_='btn participantFindButton btn-primary') }}
         </div>
       </div>
   </div>
