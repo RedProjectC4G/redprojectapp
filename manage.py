@@ -6,7 +6,8 @@ from flask import url_for
 from flask_script import Manager, Server
 from redproject.settings import get_config
 from redproject.app import create_app
-
+from redproject.extensions import mongo
+from redproject.models import User
 """3.4 is crippled"""
 try:
     from os import scandir, walk
@@ -31,6 +32,13 @@ server = Server(host='0.0.0.0', extra_files=find_assets(), threaded=True)
 
 manager = Manager(app)
 manager.add_command('run', server)
+
+@manager.command
+def init_db():
+    admin = User()
+    admin.email = 'admin@redproject.org'
+    admin.password = 'admin'
+    admin.save()
 
 @manager.command
 def list_routes():

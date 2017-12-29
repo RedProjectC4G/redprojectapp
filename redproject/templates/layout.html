@@ -38,7 +38,11 @@
             <li><a href="reversalreport.html">Reversal Report</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('login.logout') }}">{{ current_user.email }} - Logout </a></li>
+            {% else %}
             <li><a href="{{ url_for('login.login') }}">Login</a></li>
+            {% endif %}
           </ul>
         </div>
         <!--/.nav-collapse -->

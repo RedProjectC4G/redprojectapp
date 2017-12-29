@@ -46,7 +46,3 @@ def register_extensions(app):
     extensions.mongo.init_app(app)
     extensions.login_manager.init_app(app)
     extensions.login_manager.login_view = '/login'
-
-@extensions.login_manager.user_loader
-def load_user(email):
-    return None
