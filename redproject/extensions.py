@@ -1,5 +1,5 @@
-from flask_pymongo import PyMongo
+from flask_mongoengine import MongoEngine
 from flask_login import LoginManager
 
-mongo = PyMongo()
+mongo = MongoEngine()
 login_manager = LoginManager()
