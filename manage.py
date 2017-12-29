@@ -50,6 +50,9 @@ def list_routes():
     for line in sorted(output):
         print(line)
 
+@manager.command
+def list_paths():
+    print('static_folder: {}'.format(app.static_folder))
 
 if __name__ == '__main__':
     manager.run()
