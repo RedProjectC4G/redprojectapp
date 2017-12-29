@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c7f91a02cbafb33592e64acfdb4affe11d26542f09b07454dda6c0aa7c424c18"
+            "sha256": "c8023d6a319ea9b18294025b65b86366bf304432208c933028ac209494860a83"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -97,13 +97,12 @@
             ],
             "version": "==2.1.1"
         },
-        "flask-pymongo": {
+        "flask-mongoengine": {
             "hashes": [
-                "sha256:0d3cb35f874e17cc0f08066936e2f96a7a65e65af00609211b3e7518bf499813",
-                "sha256:e81c2001be555e255b3ac7776f0f2f5921f6aeef9fc94edb47c1fca2b532e59c",
-                "sha256:2baaa2ba5107d72b3a8bd4b5c0c8881316e35340ad1ae979cc13f1f3c8843b3d"
+                "sha256:013bd05d9eac88f7a4e69c109858a7d78924211b27a9490470ac0076acc83b3b",
+                "sha256:01b66bd9bfdef9cc9e7e7102e1f86e772e6777c36d8577b3ef5c94ba3216bde8"
             ],
-            "version": "==0.5.1"
+            "version": "==0.9.3"
         },
         "flask-script": {
             "hashes": [
@@ -117,6 +116,13 @@
                 "sha256:5971b9852b5888655f11db634e87725a9031e170f37c0ce7851cf83497f56e53"
             ],
             "version": "==2.3.2"
+        },
+        "flask-wtf": {
+            "hashes": [
+                "sha256:d9a9e366b32dcbb98ef17228e76be15702cd2600675668bca23f63a7947fd5ac",
+                "sha256:5d14d55cfd35f613d99ee7cba0fc3fbbe63ba02f544d349158c14ca15561cc36"
+            ],
+            "version": "==0.14.2"
         },
         "itsdangerous": {
             "hashes": [
@@ -149,6 +155,13 @@
                 "sha256:a6be69091dac236ea9c6bc7d012beab42010fa914c459791d627dad4910eb665"
             ],
             "version": "==1.0"
+        },
+        "mongoengine": {
+            "hashes": [
+                "sha256:996e0aba34e0be3834cba19a2ac77aaeebbd7b595b6b896266a2aa41cad3566e",
+                "sha256:f8fed3871dfcefd421d3a3be1b43b3b9a1622db6a4271d78f15f494e51003f75"
+            ],
+            "version": "==0.15.0"
         },
         "psycopg2": {
             "hashes": [
@@ -335,6 +348,12 @@
                 "sha256:903a7b87b74635244548b30d30db4c8947fe64c5198f58899ddcd3a13c23bb26"
             ],
             "version": "==0.12.2"
+        },
+        "wtforms": {
+            "hashes": [
+                "sha256:ffdf10bd1fa565b8233380cb77a304cd36fd55c73023e91d4b803c96bc11d46f"
+            ],
+            "version": "==2.1"
         }
     },
     "develop": {}

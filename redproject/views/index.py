@@ -6,7 +6,7 @@ blueprint = Blueprint('index', __name__)
 
 @blueprint.route("/")
 @login_required
-def get():
+def index():
     return render_template("index.html")
 
 @blueprint.route("/participant_search")
