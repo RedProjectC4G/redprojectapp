@@ -2,6 +2,7 @@
 
 import os
 
+from flask import url_for
 from flask_script import Manager, Server
 from redproject.settings import get_config
 from redproject.app import create_app
@@ -30,6 +31,24 @@ server = Server(host='0.0.0.0', extra_files=find_assets(), threaded=True)
 
 manager = Manager(app)
 manager.add_command('run', server)
+
+@manager.command
+def list_routes():
+    from urllib.parse import unquote
+    output = []
+    for rule in app.url_map.iter_rules():
+
+        options = {}
+        for arg in rule.arguments:
+            options[arg] = "[{0}]".format(arg)
+
+        methods = ','.join(rule.methods)
+        url = url_for(rule.endpoint, **options)
+        line = unquote("{:50s} {:20s} {}".format(rule.endpoint, methods, url))
+        output.append(line)
+
+    for line in sorted(output):
+        print(line)
 
 
 if __name__ == '__main__':
