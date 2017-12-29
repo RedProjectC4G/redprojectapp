@@ -9,6 +9,17 @@ blueprint = Blueprint('index', __name__)
 def index():
     return render_template("index.html")
 
-@blueprint.route("/participant_search")
+@login_required
+@blueprint.route("/participant_search/")
 def participant_search():
-    return render_template("participants_existing.html")
+    return render_template("index.html")
+
+@login_required
+@blueprint.route("/dispense_order/")
+def dispense_order():
+    return render_template("dispenseorder.html")
+
+@login_required
+@blueprint.route("/reversal_report/")
+def reversal_report():
+    return render_template("reversalreport.html")
