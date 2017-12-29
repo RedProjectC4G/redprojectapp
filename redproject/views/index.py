@@ -14,10 +14,9 @@ def index():
     error = None
     form=ParticipantForm(request.form)
     print(form.data)
-    print(form.validate_on_submit())
-    if form.validate_on_submit():
-        print('post val')
+    if form.is_submitted():
         if form.find_by_code.data:
+            print('in find_by_code')
             """check for participant code in db"""
             participant = Participant.objects(participant_code=form.participant_code.data).first()
             print(participant)
@@ -26,8 +25,17 @@ def index():
             else:
                 error = 'Invalid Participant'
         else:
+            print('in find_by_parts')
+            print(form.validate())
             """check for participant by parts and goto next step if doesn't exist"""
-        print(error)
+            participant_code = (form.gender.data + form.first_name_initial.data + '{:02d}{:02d}'.format(int(form.birthday_month.data), int(form.birthday_year.data)) + form.mother_first_name_initial.data).upper()
+            print(participant_code)
+            participant = Participant.objects(participant_code=participant_code).first()
+            print(participant)
+            if not participant:
+                Participant(participant_code = participant_code).save()
+
+            return redirect(url_for('index.existing_client',participant_code=participant_code))
     return render_template("index.html",form=form,error=error)
 
 @blueprint.route("/existing_client/",methods=['GET','POST'])
