@@ -3,10 +3,8 @@
 import os
 
 from flask_script import Manager, Server
-from flask_migrate import Migrate, MigrateCommand
 from redproject.settings import get_config
 from redproject.app import create_app
-from redproject.extensions import db
 
 """3.4 is crippled"""
 try:
@@ -26,14 +24,12 @@ def find_assets():
 config = get_config(os.getenv('FLASK_ENV'))
 
 app = create_app(config)
-migrate = Migrate(app, db)
 
 
 server = Server(host='0.0.0.0', extra_files=find_assets(), threaded=True)
 
 manager = Manager(app)
 manager.add_command('run', server)
-manager.add_command('db', MigrateCommand)
 
 
 if __name__ == '__main__':
