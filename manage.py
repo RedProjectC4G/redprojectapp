@@ -4,9 +4,9 @@ import os
 
 from flask_script import Manager, Server
 from flask_migrate import Migrate, MigrateCommand
-from app.settings import get_config
-from app.app import create_app
-from app.extensions import db
+from redproject.settings import get_config
+from redproject.app import create_app
+from redproject.extensions import db
 
 """3.4 is crippled"""
 try:
