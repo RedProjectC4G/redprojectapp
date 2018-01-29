@@ -4,21 +4,17 @@ services:
     build: .
     environment:
       - FLASK_ENV=dev
+      - MONGODB_HOST=mongo-db
+      - MONGODB_DB=red_development
     ports:
       - "5000:5000"
-    volumes:
-      - ./src:/srv/www/redproject
-    working_dir: /srv/www/redproject
-    command: python manage.py run
-  db:
-    image: postgres:9.6-alpine
+    depends_on:
+      - mongo-db
+  mongo-db:
+    image: mongo:3.6
     ports:
-      - "9001:5432"
+      - "27017:27017"
     volumes:
-      - database:/var/lib/postgresql
+      - ./data/db:/data/db
     environment:
-      POSTGRES_PASSWORD: "admin"
-      POSTGRES_USER: "admin"
-      POSTGRES_DB: "red_development"
-volumes:
-  database:
+      - MONGO_DATA_DIR=/data/db

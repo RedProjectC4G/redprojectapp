@@ -17,11 +17,11 @@ class ProdConfig(Config):
 
     ENV = 'prod'
 
-    MONGODB_USER = os.getenv('MONGO_USER')
-    MONGODB_PW = os.getenv('MONGO_PW')
-    MONGODB_HOST = os.getenv('MONGO_HOST')
-    MONGODB_PORT = os.getenv('MONGO_PORT')
-    MONGODB_DB = os.getenv('MONGO_DB')
+    MONGODB_USER = os.getenv('MONGODB_USER')
+    MONGODB_PW = os.getenv('MONGODB_PW')
+    MONGODB_HOST = os.getenv('MONGODB_HOST')
+    MONGODB_PORT = os.getenv('MONGODB_PORT')
+    MONGODB_DB = os.getenv('MONGODB_DB')
     SECRET_KEY = "r0834ht0vgb047gt"
 
 class DevConfig(Config):
@@ -30,10 +30,8 @@ class DevConfig(Config):
     ENV = 'dev'
 
     DEBUG = True
-
-    MONGODB_HOST = 'localhost'
-    MONGODB_PORT = 27017
-    MONGODB_DB = 'red_development'
+    MONGODB_HOST = os.getenv('MONGODB_HOST', default='localhost')
+    MONGODB_DB = os.getenv('MONGODB_DB', default='red_development')
     SECRET_KEY = "r0834ht0vgb047gt"
 
 def get_config(name):

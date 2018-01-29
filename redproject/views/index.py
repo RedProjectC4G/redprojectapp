@@ -41,7 +41,10 @@ def index():
 @blueprint.route("/existing_client/",methods=['GET','POST'])
 @login_required
 def existing_client():
-    return render_template("existingclient.html")
+    participant_code = request.args.get('participant_code')
+    participant = Participant.objects(participant_code=participant_code).first()
+    print(participant.birthdate)
+    return render_template("existingclient.html", participant=participant)
 
 @login_required
 @blueprint.route("/dispense_order/")
