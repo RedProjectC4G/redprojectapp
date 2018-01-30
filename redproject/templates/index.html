@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="codeSearch">Search by Code</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <form action="" method="post">
+        {{ form.csrf_token }}
+        <div class="col-md-4">
+          <div class="form-group has-feedback {% if error %} has-error {% endif %}">
+            <label class="control-label headline">Participant Code</label>
+            {{ form.participant_code(placeholder='XX0000X',class_='form-control')}}
+            <i class="glyphicon {% if error %} glyphicon-remove {% else %} glyphicon-search {% endif %} form-control-feedback"></i>
+          </div>
+        </div>
+
+        <div class="col-md-1">
+          {{ form.find_by_code(class_='btn participantFindButton btn-primary')}}
+        </div>
+      </form>
+    </div>
+
+    <div class='row'>
+      <div class="col-md-12">
+        <hr>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="codeSearch">Search by Info or Create New</h1>
+      </div>
+    </div>
+
+
+    <form action="" method="post">
+      {{ form.csrf_token }}
+      <div class="row">
+        <div class="col-md-6 gender-row">
+          <label class="control-label headline">Gender</label>
+          <div class="form-group">
+            <div class="input-group">
+              {% for subfield in form.gender %}
+              <label class="radio-inline">{{subfield}} {{subfield.label}} </label>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label headline">First Initial</label>
+            {{ form.first_name_initial(maxlength=1) }}
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label headline">Birthday</label>
+            <div class="row">
+              <div class="col-md-4">
+                {{ form.birthday_month(class_='form-control') }}
+              </div>
+              <div class="col-md-4">
+                {{ form.birthday_day(class_='form-control') }}
+              </div>
+              <div class="col-md-4">
+                {{ form.birthday_year(class_='form-control') }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label headline">Mother's First Initial</label>
+            {{ form.mother_first_name_initial(maxlength=1, class_='form-control') }}
+          </div>
+        </div>
+      </div>
+      <div class="row infoFindButton">
+        <div class="col-md-1">
+          {{ form.find_by_parts(class_='btn participantFindButton btn-primary') }}
+        </div>
+      </div>
+  </div>
+
+  <!-- If multiple participants are found with the same code, use this modal -->
+  <div class="modal fade" id="duplicateModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Multiple Participants Found</h4>
+        </div>
+        <div class="modal-body">
+          <p><strong>Select one to continue</strong></p>
+          <div class="list-group">
+            <a href="#" class="list-group-item"><strong>J</strong> <span class="pull-right">Date of Birth: 10/31/1987</span></a>
+            <a href="#" class="list-group-item"><strong>J</strong> <span class="pull-right">Date of Birth: 10/31/1987</span></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Create New</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+{% endblock %}

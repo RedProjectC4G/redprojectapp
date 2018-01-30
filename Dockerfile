@@ -1,5 +1,12 @@
-FROM python:3.5
-ADD ./src /srv/www/redproject
+FROM python:3.6
+
+ENV FLASK_ENV dev
+
+COPY . /srv/www/redproject
 WORKDIR /srv/www/redproject
-RUN pip install -r requirements.txt
-CMD ["python"]
+
+RUN pip install pipenv
+
+RUN pipenv install --system
+
+CMD ["python", "manage.py", "run"]

@@ -1,6 +1,6 @@
 import logging
 
-from flask_api import FlaskAPI
+from flask import Flask
 
 from . import views
 from . import extensions
@@ -10,7 +10,7 @@ log = logging.getLogger(__name__)
 
 
 def create_app(config):
-    app = FlaskAPI(__name__)
+    app = Flask(__name__)
     app.config.from_object(config)
 
     configure_logging(app)
@@ -35,13 +35,14 @@ def register_blueprints(app):
 
 
 def register_backend(app):
-    app.register_blueprint(views.api_root.blueprint)
-    app.register_blueprint(views.api_participant.blueprint)
-    
+    """FIXME"""
 
 def register_frontend(app):
     app.register_blueprint(views.index.blueprint)
+    app.register_blueprint(views.login.blueprint)
 
 
 def register_extensions(app):
-    extensions.db.init_app(app)
+    extensions.mongo.init_app(app)
+    extensions.login_manager.init_app(app)
+    extensions.login_manager.login_view = '/login'
